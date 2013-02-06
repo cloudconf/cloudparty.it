@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+    <title>Cloud Computing Day</title>
+
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link href='http://fonts.googleapis.com/css?family=Exo:200,900,700,400|Pacifico' rel='stylesheet' type='text/css'>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/grid_12_percent.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/tooltip.css">
+
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/ie7_8.css">
+	<![endif]-->
+
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+	function initialize_map() {
+	        var mapOptions = {
+	          zoom: 15,
+	          center: new google.maps.LatLng(45.069626, 7.665389),
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        }
+	        var map = new google.maps.Map(document.getElementById('map_canvas'),
+	                                      mapOptions);
+
+	        var I3P = new google.maps.Marker({
+	            position: new google.maps.LatLng(45.069626, 7.665389),
+	            map: map,
+	            icon: 'media/img/marker_i3p.png',
+				title:"Hotel Amasciatori"
+	        });
+
+			var hotel_sanpaolo = new google.maps.Marker({
+	            position: new google.maps.LatLng(45.068065, 7.664509),
+	            map: map,
+	            icon: 'media/img/marker_ristoranti.png',
+				title:"Ristorante Pizzeria Amici Miei"
+	        });
+
+			var stazione_portasusa = new google.maps.Marker({
+	            position: new google.maps.LatLng(45.069959, 7.664509),
+	            map: map,
+	            icon: 'media/img/marker_trasporti.png',
+				title:"Stazione Treni e Metro Porta Susa"
+	        });
+/*
+			var stazione_turro = new google.maps.Marker({
+	            position: new google.maps.LatLng(45.50093, 9.22118),
+	            map: map,
+	            icon: 'media/img/marker_trasporti.png',
+				title:"Stazione Metro Turro"
+	        });
+*/
+
+
+	      }
+    </script>
+
+</head>
+
+
+<body onload="initialize_map()">
+
+
+	<div id="wrapper">
+		<div id="site_wrapper">
+			<div id="main_navigation">
+				<a name="top"></a>
+				<nav id="site_nav">
+					<ul class="container">
+						<li><a href="#top" title="">Cloud Conference</a></li>
+						<li><a href="#info" title="">La conferenza</a></li>
+                        <li><a href="#programma" title="">Programma</a></li>
+                        <li><a href="#registrati" title="">Registrati</a></li>
+						<li><a href="#sponsorizza" title="">Sponsorizza</a></li>
+						<li><a href="#location" title="">La location</a></li>
+						<li><a href="#sponsor" title="">Gli sponsor</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<header id="site_header" class="container">
+				<div class="grusp_header">
+					<p class="organizer"><a id="logo_grusp" class="organizer_logo" href="http://torino.grusp.org/"><img
+                        src="media/img/logo/grusp_to.png" alt="GrUSP" width="140" height="67" /><span>Associazione Gruppo Utenti Sviluppatori PHP Italiani</span></a>
+
+					<em class="plus"><img src="media/img/bg_plus.png" alt="bg_plus" width="12" height="12" /></em>
+
+					<a id="logo_grusp_to" class="organizer_logo" href="http://www.corley.it/"><img
+                        src="media/img/logo/corley.png" alt="corley" /><span>Corley S.r.l. </span></a></p>
+
+					<h4>presentano</h4>
+				</div>
+
+				<div class="event_title">
+					<div class="event_logo column_2">
+                        <!--<img src="media/img/zf2_logo.png" alt="Zend Framwork 2" />-->&nbsp;
+					</div>
+					<div class="event_name column_8">
+						<h1 id="fittext1">Cloud Conference</h1>
+						<h2 id="fittext2">TORINO, 18 Apr. 2013</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+
+				<div class="share">
+					<h4>Share</h4>
+					<div class="addthis_wrapper">
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style ">
+                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                        <a class="addthis_button_tweet"></a>
+                        <a class="addthis_counter addthis_pill_style"></a>
+                        </div>
+                        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50ac9a3237717dfe"></script>
+                        <!-- AddThis Button END -->
+					</div>
+				</div>
+				<div class="separator"></div>
+
+			</header>
+
+            <section class="alpha_8">
+    <div class="container group">
+        <!-- Follow us -->
+        <div class="follow_us">
+            <h4 class="deco">Seguici!</h4>
+
+            <ul class="social_grusp">
+                <li class="grusp_fb"><a href="" title="">Facebook</a></li>
+                <li class="grusp_twitter"><a href="" title="">Twitter</a></li>
+                <li class="grusp_vimeo"><a href="" title="">Vimeo</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="separator"></div>
+</section>
+
+
+<a name="info"></a>
+<section class="alpha_16">
+    <div class="container group">
+
+        <div class="column_6 centered">
+            <h3 class="center">La conferenza</h3>
+
+            <p><strong>Zend Framework &egrave; uno dei framework PHP pi&ugrave; apprezzati sul mercato.</strong></p>
+
+            <p>Lo Zend Framework &egrave; diventato il riferimento per quanto riguarda lo sviluppo ad alto livello con
+            PHP e molti software open source e commerciali, come Magento, Piwik e molti altri progetti lo utilizzano
+            al loro interno.</p>
+
+            <p>Lo Zend Framework Day &egrave; l'evento di riferimento su Zend Framework che introduce le best practice
+            e ne mostra case study ad alto livello.</p>
+
+            <p>Rimani informato ed
+            <a href="http://eepurl.com/rCZZT" target="_blank">iscriviti alla nostra newsletter</a></p>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="separator"></div>
+</section>
+
+
+<a name="programma"></a>
+<section class="alpha_24">
+    <div class="container group">
+        <h3 class="center">Il programma</h3>
+        <table id="schedule" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Track 1</th>
+                    <th style="width:160px;">Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                                <tr class="common_event">
+                    <td class="time">09:00 &ndash; 09:30</td>
+                    <td><h4><a href="#" title="Check-In">Check-In</a></h4></td>
+                    <td><a class="banner" href="#" target="_blank" title="Amazon Web Services">Amazon Web Services</a></td>
+                </tr>
+                            </tbody>
+        </table>
+        <div class="separator cnt_separator"></div>
+    </div>
+
+    <a name="registrati"></a>
+
+    <div class="container group center">
+        <h3>Registrati ora!</h3>
+        <div class="column_10 centered">
+
+            <!--            <p>
+            Suggeriscici <a href="https://docs.google.com/a/grusp.org/spreadsheet/viewform?formkey=dHFZbGNfWGlPX3Z5T3FJRVVzWWNKdkE6MA#gid=0">il tuo talk</a> entro il 23/12/2012
+            </p>
+            -->
+            <!--
+            <iframe
+                src="http://www.eventbrite.com/tickets-external?eid=5049124066&ref=etckt&v=2"
+                frameborder="0" height="214" width="100%" vspace="0" hspace="0"
+                marginheight="5" marginwidth="5" scrolling="auto"
+                allowtransparency="true"></iframe>
+            -->
+        </div>
+    </div>
+    <div class="separator"></div>
+</section>
+
+<a name="location"></a>
+<section class="alpha_32">
+    <div class="container group">
+        <h3 class="column_12">Location</h3>
+        <div class="column_6 map">
+            <div id="map_canvas"></div>
+        </div>
+
+        <div class="column_6 legend right">
+            <dl>
+                <dt class="event_location"><span><strong>Event location</strong></span></dt>
+                <dd  class="event_location">
+                    <a target="_blank" href="http://www.nh-hotels.it/nh/it/hotels/italia/torino/nh-ambasciatori.html">Hotel NH Ambasciatori</a><br/>
+                corso Vittorio Emanuele II 104, <br/>
+                Torino, Italy
+                </dd>
+                <dt class="eat"><span><strong>Dove mangiare</strong></span></dt>
+                <dd>Ristoranti</dd>
+                <dt class="get_to"><span><strong>Come arrivare</strong></span></dt>
+                <dd>Trasporti</dd>
+                <dt class="stay"><span><strong>Dove dormire</strong></span></dt>
+                <dd>Alberghi</dd>
+            </dl>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="column_3">
+            <h5>In auto</h5>
+            <p>Dall'autostrada, seguire le indicazioni per il centro.</p>
+
+        </div>
+
+        <div class="column_3">
+            <h5>In treno</h5>
+            <p>
+                <strong>Dalla stazione Centrale (Frecciarossa)</strong>: prendere la  metro in direzione Duomo, cambiare e prendere la metro Rossa in direzione Turro o Rovereto. Scendere ad una di queste due fermate e proseguire a piedi per via Merano 18.
+            </p>
+        </div>
+
+        <div class="column_3">
+            <h5>In aereo</h5>
+            <p>
+                <strong>Da Linate</strong>: prendi la linea 73 fino a San Babila e poi prendi la M1 fino a Turro.
+            </p>
+        </div>
+
+        <div class="column_3">
+            <h5>Pernottamento</h5>
+            <p>
+<a href="http://www.booking.com/searchresults.it.html?label=gog235jc-district-it-it-milan_vialemonza-unspec-it-com;sid=27e9aa428736e19252d95a2043406490;dcid=1;checkin_monthday=1;checkin_year_month=2013-2;checkout_monthday=2;checkout_year_month=2013-2;class_interval=1;csflt=%7B%7D;inac=0;offset=0;redirected_from_city=0;redirected_from_landmark=0;review_score_group=empty;score_min=0;si=ai%2Cco%2Cci%2Cre%2Cdi;src=searchresults;ss_all=0;;district=2062;city=-121726;origin=disamb;srhash=4267253188;srpos=1" target="_blank">Alberghi in zona</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+</div>
+<div class="separator"></div>
+</section>
+
+<section class="sponsors">
+    <a name="sponsor"></a>
+    <div class="container group">
+        <h3>Gli sponsor</h3>
+
+        <div class="gold_sponsors">
+    <h4 class="gold">Gold</h4>
+
+        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
+        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
+    </a>
+    
+
+    <div class="clear"></div>
+</div>
+
+
+        <div class="silver_sponsors">
+    <h4 class="silver">Silver</h4>
+
+        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
+        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
+    </a>
+    
+    <div class="clear"></div>
+</div>
+
+        <div class="bronze_sponsors">
+    <h4 class="bronze">Bronze</h4>
+
+        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
+        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
+    </a>
+    
+    <div class="clear"></div>
+</div>
+
+    </div>
+
+
+    <a name="sponsorizza"></a>
+    <div class="container group">
+        <h3 class="center">Sponsorizza</h3>
+        <div class="column_12">
+            <p>Un grande evento &egrave; fatto anche di grandi sponsor, perch&eacute; quindi non sfruttare l'occasione e contribuire alla conferenza?<br/>
+            <a href="mailto:info@grusp.org">Contattaci</a> per chiederci come sponsorizzarci!</p>
+        </div>
+        <div class="clear"></div>
+
+        <div class="column_4">
+            <h4 class="gold">Gold</h4>
+            <span class="euro btn">€ 1000+iva</span>
+            <ul class="benefit">
+                <li>Banner sul sito</li>
+                <li>Pubblicit&agrave; nelle comunicazioni pre-evento</li>
+                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
+                <li>Presenza logo sul programma stampato</li>
+                <li>Potete posizionare il vostro flyer nella sala</li>
+            </ul>
+        </div>
+
+        <div class="column_4">
+            <h4 class="silver">Silver</h4>
+            <span class="euro btn">€ 500+iva</span>
+            <ul class="benefit">
+                <li>Banner sul sito</li>
+                <li>Pubblicit&agrave; nelle comunicazioni pre-evento</li>
+                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
+                <li>Presenza logo sul programma stampato</li>
+            </ul>
+        </div>
+
+        <div class="column_4">
+            <h4 class="bronze">Bronze</h4>
+            <span class="euro btn">€ 300+iva</span>
+            <ul class="benefit">
+                <li>Banner sul sito</li>
+                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</section>
+
+
+
+			<footer id="site_footer">
+				<div class="container group">
+					<div class="ftr_info">
+						&copy; 2012-2013 Grusp. Tutti i diritti riservati.
+						<ul>
+						 	<li><a href="http://www.grusp.org" title="">Cos'&egrave; il Grusp?</a></li>
+						 	<!--li><a href="#" title="">Privacy policy</a></li-->
+						 	<li><a href="mailto:info@grusp.org" title="">Contattaci</a></li>
+						</ul>
+					</div>
+
+					<a id="back_top" href="#top" title="">Torna su</a>
+				</div>
+			</footer>
+
+		</div> <!-- Closes #wrapper -->
+	</div><!-- Closes #site_wrapper -->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 	<script src="scripts/jquery.fittext.js"></script>
+ 	<script src="scripts/jquery.tooltip.js"></script>
+	<script type="text/javascript">
+		$("#fittext1").fitText(1.0);
+		$("#fittext2").fitText(1.6);
+		//$("#fittext3").fitText(1.1, { minFontSize: 50, maxFontSize: '75px' });
+	</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3559597-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
