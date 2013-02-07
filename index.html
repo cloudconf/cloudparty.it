@@ -1,417 +1,88 @@
-<!DOCTYPE html>
-
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-
-    <title>Cloud Computing Day</title>
-
-	<!-- Responsive and mobile friendly stuff -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-
-	<link href='http://fonts.googleapis.com/css?family=Exo:200,900,700,400|Pacifico' rel='stylesheet' type='text/css'>
-
-	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="styles/reset.css">
-	<link rel="stylesheet" href="styles/grid_12_percent.css">
-	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/tooltip.css">
-
-
-	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="css/ie7_8.css">
-	<![endif]-->
-
-
-
-	<!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script>
-	function initialize_map() {
-	        var mapOptions = {
-	          zoom: 15,
-	          center: new google.maps.LatLng(45.069626, 7.665389),
-	          mapTypeId: google.maps.MapTypeId.ROADMAP
-	        }
-	        var map = new google.maps.Map(document.getElementById('map_canvas'),
-	                                      mapOptions);
-
-	        var I3P = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.067664, 7.66542),
-	            map: map,
-	            icon: 'media/img/marker_i3p.png',
-				title:"Hotel Amasciatori"
-	        });
-
-			var rist1 = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.06666, 7.66859),
-	            map: map,
-	            icon: 'media/img/marker_ristoranti.png',
-				title:"Ristorante Pizzeria Amici Miei e Trattoria La Capannina"
-	        });
-			var rist2 = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.068448, 7.6666),
-	            map: map,
-	            icon: 'media/img/marker_ristoranti.png',
-				title:"Ristorante Dado"
-	        });
-
-			var stazione_portasusa = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.069959, 7.664509),
-	            map: map,
-	            icon: 'media/img/marker_trasporti.png',
-				title:"Stazione Treni e Metro Porta Susa"
-	        });
-			var hotel1 = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.073248,7.669401),
-	            map: map,
-	            icon: 'media/img/marker_hotel.png',
-				title:"Hotel Diplomatic"
-	        });
-
-
-	      }
-    </script>
-
-</head>
-
-
-<body onload="initialize_map()">
-
-
-	<div id="wrapper">
-		<div id="site_wrapper">
-			<div id="main_navigation">
-				<a name="top"></a>
-				<nav id="site_nav">
-					<ul class="container">
-						<li><a href="#top" title="">Cloud Conference</a></li>
-						<li><a href="#info" title="">La conferenza</a></li>
-                        <li><a href="#programma" title="">Programma</a></li>
-                        <li><a href="#registrati" title="">Registrati</a></li>
-						<li><a href="#sponsorizza" title="">Sponsorizza</a></li>
-						<li><a href="#location" title="">La location</a></li>
-						<li><a href="#sponsor" title="">Gli sponsor</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<header id="site_header" class="container">
-				<div class="grusp_header">
-					<p class="organizer"><!-- <a id="logo_grusp" class="organizer_logo" href="http://torino.grusp.org/"><img
-                        src="media/img/logo/grusp_to.png" alt="GrUSP" width="140" height="67" /><span>Associazione Gruppo Utenti Sviluppatori PHP Italiani</span></a>
-
-					<em class="plus"><img src="media/img/bg_plus.png" alt="bg_plus" width="12" height="12" /></em>-->
-
-					<a id="logo_grusp_to" class="organizer_logo" href="http://www.corley.it/"><img
-                        src="media/img/logo/corley-logo-negative.png" alt="corley" /><span>Corley S.r.l. </span></a></p>
-
-					<h4>presenta</h4>
-				</div>
-
-				<div class="event_title">
-					<div class="event_logo column_2">
-                        &nbsp;
-					</div>
-					<div class="event_name column_8">
-						<h1 id="fittext1">Cloud Conference</h1>
-						<h3 id="fittext3">Il primo grande evento italiano dedicato a scalabilità e cloud development.</h3>
-						<h2 id="fittext2">TORINO, giovedì 18 Apr. 2013</h2>
-					</div>
-					<div class="clear"></div>
-				</div>
-
-
-
-				<div class="share">
-					<h4>Share</h4>
-					<div class="addthis_wrapper">
-                      <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
-<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-<a class="addthis_button_tweet"></a>
-<a class="addthis_button_pinterest_pinit"></a>
-<a class="addthis_counter addthis_pill_style"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511288d075bcec8a"></script>
-<!-- AddThis Button END -->
-                        <!-- AddThis Button END -->
-					</div>
-				</div>
-				<div class="separator"></div>
-
-			</header>
-
-            <section class="">
-    <div class="container group">
-        <!-- Follow us -->
-        <div class="follow_us">
-            <h4 class="deco">Seguici!</h4>
-
-            <ul class="social_grusp">
-                <li class="grusp_fb"><a href="https://www.facebook.com/pages/Cloud-Conf-Italia/140265592804313?ref=hl" title="" target='_blank'>Facebook</a></li>
-                <li class="grusp_twitter"><a href="https://twitter.com/_CloudConf_" title="" target='_blank'>Twitter</a></li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="separator"></div>
-</section>
-
-
-<a name="info"></a>
-<section class="alpha_32">
-    <div class="container group">
-
-        <div class="column_6 centered">
-            <h3 class="center">La conferenza</h3>
-
-            <p><strong>Il Cloud Computing rappresenta la nuova rivoluzione informatica.</strong></p>
-
-            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> è un punto di incontro per tutti gli sviluppatori web italiani, le startup ed i professionisti del settore IT che desiderano approfondire le possibilità offerte dalle tecnologie Cloud.</p>
-            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento attraverso il tema comune della scalabilità.</p>
-            <p>La Cloud Conference è un appuntamento imperdibile tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
-
-         
-        </div>
-
-        <div class="clear"></div>
-    </div>
-    <div class="separator"></div>
-</section>
-
-
-<a name="programma"></a><a name="registrati"></a>
-<section class="alpha_8">
-    <div class="container group">
-        <h3 class="center">Il programma</h3>
-        <p class="center">Il programma è in fase di definizione. La conferenza si terrà il 18 aprile dalle 9:30 alle 17:30</p>
-        <p class="center"><strong>Rimanete collegati, i biglietti saranno disponibili fra pochi giorni!</strong></p>				
-        <p class="center"><img src='media/img/clouds.png' alt='' /></p>
-        <!-- <table id="schedule" border="0" cellspacing="0" cellpadding="0">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Track 1</th>
-                    <th style="width:160px;">Company</th>
-                </tr>
-            </thead>
-            <tbody>
-                                <tr class="common_event">
-                    <td class="time">09:00 &ndash; 09:30</td>
-                    <td><h4><a href="#" title="Check-In">Check-In</a></h4></td>
-                    <td><a class="banner" href="#" target="_blank" title=""></a></td>
-                </tr>
-                            </tbody>
-        </table>-->
-        <div class="separator cnt_separator"></div>
-    </div>
-
-   <!--  <a name="registrati"></a>
-
-    <div class="container group center">
-        <h3>Registrati ora!</h3>
-        <div class="column_10 centered">
--->
-            <!--            <p>
-            Suggeriscici <a href="https://docs.google.com/a/grusp.org/spreadsheet/viewform?formkey=dHFZbGNfWGlPX3Z5T3FJRVVzWWNKdkE6MA#gid=0">il tuo talk</a> entro il 23/12/2012
-            </p>
-            -->
-            <!--
-            <iframe
-                src="http://www.eventbrite.com/tickets-external?eid=5049124066&ref=etckt&v=2"
-                frameborder="0" height="214" width="100%" vspace="0" hspace="0"
-                marginheight="5" marginwidth="5" scrolling="auto"
-                allowtransparency="true"></iframe>
-            -->
-   <!--      </div>
-    </div>
-    <div class="separator"></div>-->
-</section>
-
-<a name="location"></a>
-<section class="alpha_32">
-    <div class="container group">
-        <h3 class="column_12">Location</h3>
-        <div class="column_12 ">L'evento si svolgerà in pieno centro di Torino, a pochi metri dalla stazione di Porta Susa con decine di collegamenti giornalieri con Milano ed il nord Italia<br/>&nbsp;.</div>
-        <div class="column_6 map">
-            <div id="map_canvas"></div>
-        </div>
-
-        <div class="column_6 legend right">
-            <dl>
-                <dt class="event_location"><span><strong>Event location</strong></span></dt>
-                <dd  class="event_location"><a target="_blank" href="http://www.nh-hotels.it/nh/it/hotels/italia/torino/nh-ambasciatori.html">Hotel NH Ambasciatori</a><br/>
-                corso Vittorio Emanuele II 104, <br/>
-                Torino, Italy
-                </dd>
-                <dt class="eat"><span><strong>Dove mangiare</strong></span></dt>
-                <dd>Ristoranti</dd>
-                <dt class="get_to"><span><strong>Come arrivare</strong></span></dt>
-                <dd>Trasporti</dd>
-                <dt class="stay"><span><strong>Dove dormire</strong></span></dt>
-                <dd>Alberghi</dd>
-            </dl>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="column_3">
-            <h5>In auto</h5>
-            <p>Dall'autostrada, seguire le indicazioni per il centro (corso Vittorio Emanuele II 104)</p>
-
-        </div>
-
-        <div class="column_3">
-            <h5>In treno</h5>
-            <p>
-                <a href='http://www.trenitalia.com/' target='_blank'>Trenitalia</a> e <a href='http://www.italotreno.it' target='_blank'>ItaloTreno</a> con provenienza Milano e nord Italia fermano alla <strong>Stazione di Porta Susa, a 200 metri dalla conferenza</strong>: dal binario uscire dalla <strong>scala A</strong> sul lato Piazza VIII Dicembre, e proseguire a piedi lungo corso Vittorio Emanuele II.<br/>
-                Invece, dalla stazione Porta Nuova prendere la metropolitana in direzione Fermi e scendere alla fermata Vinzaglio, a 50 metri dall'Hotel Ambasciatori.
-            </p>
-        </div>
-
-        <div class="column_3">
-            <h5>In aereo</h5>
-            <p>
-                <strong>Da Caselle Aeroporto</strong>: prendere la <a href='http://www.sadem.it/upload/orari/estivi/000268.pdf' target='_blank'>navetta</a> che ferma alla Stazione di Porta Susa, a 250 metri dalla conferenza.
-            </p>
-        </div>
-
-        <div class="column_3">
-            <h5>Pernottamento</h5>
-            <p>
-            E' possibile pernottare direttamente all'hotel <a href='http://www.nh-hotels.it/nh/it/hotels/italia/torino/nh-ambasciatori.html' target='_blank'>NH Ambasciatori</a>, sede della conferenza, o cercare una delle tante soluzioni disponibili in zona nel centro di Torino:
-<a href="http://www.booking.com/searchresults.it.html?label=gog235jc-district-it-it-milan_vialemonza-unspec-it-com;sid=7a7ca21f36577422fd4e75e5703f6942;dcid=1;checkin_year_month_monthday=2013-04-17;checkout_year_month_monthday=2013-04-18;class_interval=1;csflt={};force_auto_extend=1;inac=0;latitude=45.0755556;longitude=7.67616559999999;map_thumb_zoom=14;radius=0.630449648976845.6304496489768454;redirected_from_city=0;redirected_from_landmark=0;review_score_group=empty;ss_all=0;ssb=empty;order=price_for_two" target="_blank">Alberghi in zona</a>
-            </p>
-        </div>
-    </div>
-<div class="separator"></div>
-</section>
-
-<section class="sponsors">
-    <a name="sponsor"></a>
-    <div class="container group">
-        <h3>Gli sponsor</h3>
-
-        <div class="gold_sponsors">
-    <h4 class="gold">Gold</h4>
-
-        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
-        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
-    </a>
-    
-
-    <div class="clear"></div>
-</div>
-
-<!-- 
-        <div class="silver_sponsors">
-    <h4 class="silver">Silver</h4>
-
-        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
-        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
-    </a>
-    
-    <div class="clear"></div>
-</div>
-
-        <div class="bronze_sponsors">
-    <h4 class="bronze">Bronze</h4>
-
-        <a class="banner" href="http://www.corley.it/" title="Corley S.r.l.">
-        <img src="media/img/bronze/sponsor_corley.png" alt="sponsor Corley" width="300" height="120" />
-    </a>
-    
-    <div class="clear"></div>
-</div>
--->
-    </div>
-
-
-    <a name="sponsorizza"></a>
-    <div class="container group">
-        <h3 class="center">Sponsorizza</h3>
-        <div class="column_12">
-            <p>Un grande evento &egrave; fatto anche di grandi sponsor, perch&eacute; quindi non sfruttare l'occasione e contribuire alla conferenza?<br/>
-            <a href="mailto:cloudconf@corley.it">Contattaci</a> per chiederci come sponsorizzarci!</p>
-        </div>
-        <div class="clear"></div>
-
-        <div class="column_4">
-            <h4 class="gold">Gold</h4>
-            <span class="euro btn">€ 1000+iva</span>
-            <ul class="benefit">
-                <li>Banner sul sito</li>
-                <li>Pubblicit&agrave; nelle comunicazioni pre-evento</li>
-                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
-                <li>Presenza logo sul programma stampato</li>
-                <li>Potete posizionare il vostro flyer nella sala</li>
-            </ul>
-        </div>
-
-        <div class="column_4">
-            <h4 class="silver">Silver</h4>
-            <span class="euro btn">€ 500+iva</span>
-            <ul class="benefit">
-                <li>Banner sul sito</li>
-                <li>Pubblicit&agrave; nelle comunicazioni pre-evento</li>
-                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
-                <li>Presenza logo sul programma stampato</li>
-            </ul>
-        </div>
-
-        <div class="column_4">
-            <h4 class="bronze">Bronze</h4>
-            <span class="euro btn">€ 300+iva</span>
-            <ul class="benefit">
-                <li>Banner sul sito</li>
-                <li>Autorizzazione a portare pubblicit&agrave; e gadget (ie. volantini, adesivi, magliette)</li>
-            </ul>
-        </div>
-
-        <div class="clear"></div>
-    </div>
-</section>
-
-
-
-			<footer id="site_footer" class='alpha_32'>
-				<div class="container group">
-					<div class="ftr_info">
-						Cloud Conference Italia - Torino, 18 aprile 2013, Hotel NH Ambasciatori
-					</div>
-
-					<a id="back_top" href="#top" title="">Torna su</a>
-				</div>
-			</footer>
-
-		</div> <!-- Closes #wrapper -->
-	</div><!-- Closes #site_wrapper -->
-
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
- 	<script src="scripts/jquery.fittext.js"></script>
- 	<script src="scripts/jquery.tooltip.js"></script>
-	<script type="text/javascript">
-		$("#fittext1").fitText(1.0);
-		$("#fittext2").fitText(1.6);
-		//$("#fittext3").fitText(1.1, { minFontSize: 50, maxFontSize: '75px' });
-	</script>
-
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="Corley is an italian startup focused on web and cloud development." />
+<meta name="keyword" content="" />
+<meta name="Copyright" content="Corley" />
+<meta name="Language" content="English" />
+<meta name="robots" content ="index,follow" />
+<meta name="documentType" content="WebDocument" />
+<meta name="publisher" content="" />
+<meta name="ICBM" content="45.030, 7.40" />
+<meta name="geo.position" content="45.030, 7.40" />
+                                                      
+<title>Cloud Conference 2013</title>
+
+<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rambla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+     
+<script type="text/javascript" src="principale.js"></script>
+
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type='text/javascript'>  
+window.addEvent('domready', function() {               
+
+	
+	today=new Date()
+	var birthday=new Date(2012, 0, 27);
+	var one_day=1000*60*60*24
+	var days =Math.ceil((today.getTime()-birthday.getTime())/(one_day));
+	//$('days').set('html', days);
+	
+	/**$('menu').getElements('span').each(function(day) {
+		var dd=day.get('html').toInt();
+		if(dd>days) day.destroy();
+	});
+	$('menu').reveal();*/
+	
+	var links = $$('.link');
+	links.each(function(link, ii) {
+		link.addEvent('click', function() {
+			var iii = ii+1;
+			new Fx.Scroll(window).toElement('block'+iii);
+		});
+	});
+	
+	$('gotop').addEvent('click', function() {
+		new Fx.Scroll(window).toTop();
+	});
+	
+	
+		
+	var update_pos = function(fxc, el){
+		var scroll = window.getScroll();
+		fxc.start({
+			'top': [el.getStyle('top'), scroll.y+250]
+		});
+	}
+
+	var liv1Dim=$('liv1').getPosition();
+	$('sharefloat').setStyle('left', liv1Dim.x+990);
+	morph_sharefloat = new Fx.Morph($('sharefloat'), {duration:500, transition: Fx.Transitions.Linear});
+	var floatshow=false;
+	window.addEvents({
+    'scroll': function(){
+    	if(!floatshow) {
+			floatshow=true;$('sharefloat').reveal(); 
+		}
+        (function() {update_pos(morph_sharefloat, $('sharefloat'));}).delay(1000)
+      }
+	     
+	});
+		
+
+});
+</script>
+
+		<!-- 
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-3559597-14']);
+  _gaq.push(['_setAccount', 'UA-32091906-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -421,5 +92,568 @@
   })();
 
 </script>
+-->
+</head>
+<body> 
+<div class='lineare_no' id='liv0'>
+    <div id='sharefloat'>
+        <a href='' target='_blank'><img src='linkedin-shield.png' title='linkedin corley' alt='linkedin corley' class='' /></a>
+        <a href='' target='_blank'><img src='twitter-shield.png' title='twitter corley' alt='twitter corley' class='' /></a>
+    </div>
+    <div id='fixed' class='lineare_no'>
+    	<a href='#' class='link' >La Conferenza</a>
+    	<a href='#' class='link'>Programma & Biglietti</a>
+    	<a href='#' class='link'>Location</a>
+    	<a href='#' class='link'>Sponsor</a>
+    </div>
+	<div class='inside' id='liv1'>
+		<h2>giovedì 18 Aprile 2013, a Torino</h2>
+		<h1>Cloud Conference</h1>
+		<h3>Il primo grande evento italiano dedicato a scalabilità e cloud development.</h3>
+		
+		
+		
+		
+		<div id='block1' class='block'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>La conferenza</span> - <span class='grassetto'>Corley birthday!</span></h3>
+			</div>
+			<div class='lineare_no'>
+				<div class='trequarti'>			
+					
+		            <p><strong>Il Cloud Computing rappresenta la nuova rivoluzione informatica.</strong></p>
+		            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> è un punto di incontro per tutti gli sviluppatori web italiani, le startup ed i professionisti del settore IT che desiderano approfondire le possibilità offerte dalle tecnologie Cloud.</p>
+		            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento attraverso il tema comune della scalabilità.</p>
+		            <p>La Cloud Conference è un appuntamento imperdibile tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
+				
+				</div>
+				<div class='destra'>
+					<img src='logo.png' title='logo corley' alt='logo corley' class='' />
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id='day4' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Day 4: 30th jan</span> - <span class='grassetto'>A home for Corley...</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+					<img src='piazzastatuto.jpg' title='logo corley' alt='logo corley' class='' />
+			</div>
+			<p class='testo_cen'>Maybe we found a 700 ft office for our startup, in the heart of Turin, Italy!</p>
+		</div>
+
+
+
+
+		<div id='day6' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_arancio'>Day 6: 1st feb</span> - <span class='grassetto'>Office: rented!</span></h3>
+			</div>
+			<div class='lineare_no'>
+				<div class='meta'>			
+					<p>The home of our cloudy dream.</p>
+					<p>Now we have a small but smart place where working, planning and make business.</p>
+					<p>On the right you can see an image about preliminary planning:<br/><br/>
+						<span class='arrow'>a space where develop (in the middle)</span><br/>
+						<span class='arrow'>a waiting/and/relax room (on the right)</span><br/> 
+						<span class='arrow'>and a <i>blah-blah</i> room for meeting (on the left)</span><br/>
+					</p>
+				</div>
+				<div class='destra'>
+					<img src='office.jpg' title='office corley'  alt='office corley' class='border office' />
+				</div>
+			</div>	
+		</div>
+	</div>
+		
+	<div class='break break1'>   
+		<div class='inside'>
+			<h2 class='lineare_10'>break 1. <strong>Who we are?</strong></h2>
+			<div class='lineare'>
+				<div class='duequinti'>
+					<strong>Gabriele Mittica</strong><br/><br/>
+					Gabriele is a 28 years old web developer with a long experience on dynamic websites.<br/>
+					He worked over 6 years on content management systems development and frontend designing. Now he's focused on AWS integration with CMS.<br/>
+					He loves dogs, trekking and soccer.<br/> 
+				</div>
+				<div class='destra duequinti'> 
+					<strong>Walter Dal Mut</strong><br/><br/>
+					Walter is a 28 years old web developer with a great experience with web engineering systems.<br/>
+					He can provide a powerful experience with PhP, Java and cloud based architectures designed to grant scalable and high-performance availability.<br/>
+					He loves cats, swimming and rugby. 
+				</div>
+			</div>
+		</div>
+	</div>   
+	
+	 
+	<div class='inside'>
+		
+		
+		
+		<div id='day8' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_viola'>Day 8: 3rd feb</span> - <span class='grassetto'>A gift from Amazon!</span></h3>
+			</div>
+			<div class='lineare_no'> 
+				<div class='sinistra terzo margin_top_15'>
+					<img src='aws.png' title='logo corley' alt='logo corley' class='margin_top_15' />
+				</div>
+				<div class='trequinti padding_left_20'>	
+					<p>Today Gabriele woke up and said: <span class='italico testo20 grassetto'>Woaaaa!</span></p>
+					<p>We received a great news: Amazon Web Services opened a new edge location for CloudFront in Milan!</p>
+					<p>Now the cloud is better near to us. Thank you, Amazon!</p>
+				</div>
+			</div>
+		</div>
+		            
+
+		<div id='day11' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 11: 6th feb</span> - <span class='grassetto'>Over 1 million of REQUESTS served.</span></h3>
+			</div>    
+			<div class='lineare_no'>     
+				<div>
+					<img src='upcloo.png' title='stat upcloo'  alt='stat upcloo' class='border' />
+				</div>
+				<div class='duequinti destra'>
+					<p class='testo19'>UpCloo is our semantic correlation service, now in beta test.</p>
+					<p>Thanks to the cloud we are proud to say that UpCloo has exceeded the limit of <strong>first million requests</strong> during 2012.</p>
+					<p>Special thanks to our customers who have been involved in the test.</p>       
+					<p class='testo_des testo13 italico'>See the <a href='http://www.upcloo.com' target='_blank' title=''>UpCloo web page</a></p>
+				</div>    
+			</div>	
+		</div>
+		
+		
+		
+		
+
+		<div id='day13' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_arancio'>Day 13: 8th feb</span> - <span class='grassetto'>The road through papers</span></h3>
+			</div>
+			<div class='lineare_no'>
+				<div class='dueterzi'>
+					<p class='padding_left_20 testo15 testo_granata'>Talking with the bank-man...</p>
+					<p class='testo_des testo20 testo_grigio_78'>Searching the best office for us</p>
+					<p class='testo11 grassetto'>...Bring the documents to the notary</p>
+					<div class='lineare padding_bottom_20'>
+						<span class='destra italico'>Seeking for the perfect furnitures</span>
+						<span class='margin_left_20 padding_left_20 testo14 testo_marrone'>...Calling the business consultant</span>
+					</div>
+					<p class='testo20 testo_cen'>Designing the product packages...</p>
+					<p class='testo14 testo_des'>Connecting the power cables without crying <span class='italico grassetto testo18 testo_rosso'>UAARGH!!!</span></p> 
+				</div>    
+				<div class='destra'>
+					<img src='tools.jpg' title='badges'  alt='badges' class='border' />
+				</div>
+			</div>	
+		</div>  
+		
+		   
+		<div id='day16' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>Day 16: 11th feb</span> - <span class='grassetto'>Week end: work in progress...</span></h3>
+			</div>
+			<div class='lineare_no'> 
+				<div class='sinistra quinto margin_top_15 testo_cen'>
+					<img src='hat.png' title='logo corley' alt='logo corley' class='margin_top_15' />
+				</div>
+				<div class='trequarti padding_left_20'>	
+					<p>We spent our weekend doing shopping and planning our office.</p>
+					<p><span  class='testo19'>We have purchased: desks, meeting tables, chairs, lamps, sofa, bookcases, shelves and other tools.</span></p>
+					<p>...and, last but not least, Walter has connected the power cables without die!</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id='day21' class='day'>  
+			<div id='day22' class='lineare_no'></div>
+			<div id='day23' class='lineare_no'></div>
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Days 21-23: 16th-18th feb</span> - <span class='grassetto'>Interior design!</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20 nounderline'>
+					
+					<img class='slimbox_thumb' src='big02.jpg'  />
+					<img class='slimbox_thumb' src='big01.jpg'  />
+					<img class='slimbox_thumb' src='big03.jpg'  />
+					<img class='slimbox_thumb' src='big04.jpg'  />
+					<img class='slimbox_thumb' src='big06.jpg'  />
+					<img class='slimbox_thumb' src='big05.jpg'  />
+					<img class='slimbox_thumb' src='big08.jpg'  />
+					<img class='slimbox_thumb' src='big07.jpg'  />
+			</div>  
+			<p class='testo_cen'>Working hard on layout of the office! <a href='http://it.homestyler.com/designerro/5c5d9de0-53e8-4ff3-80ff-da78f714ebc9' title='' target='_blank' class='grassetto'>Here</a> you can see a 2D/3D preview!</p>
+		</div>  
+		
+		
+		
+		<div id='day27' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>Day 27: 22nd feb</span> - <span class='grassetto'>JAVA is here (the coffee, not the language...)</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+				<img src='java.jpg' title='a cup of coffee' alt='a cup of coffee' class='' />
+			</div>
+			<p class='testo_cen'>We're developers, but we're <i>italian</i> too... Today our new coffe machine arrived to the office! <strong>Oh, yeah</strong>!</p>
+		</div>
+	</div>
+	
+		
+	<div class='break break2'>   
+		<div class='inside'>
+			<h2 class='lineare_10'>break 2. <strong>The first month has gone!</strong></h2>
+			<div class='lineare'>
+				<div class='quattroquinti'>
+					<strong>Step by step.</strong><br/><br/>
+					During the last weeks our hands have been only for this new adventure.<br/>
+					Work on furnitures. Go to the bank. Call the business consultant.<br/> 
+					Now, after the first month, we can focus on our products, the brand, our new projects.<br/>
+					In the next weeks we'll work on new UpCloo features, search-based services for blogs and newspapers online, integration of new AWS products.
+				</div>
+				<div class='quinto'> 
+					<img src='calendar.png' title='' border='0 alt='' class='destra'/>	
+				</div>
+			</div>
+		</div>
+	</div>   
+	
+	 
+	<div class='inside'> 
+		
+		<div id='day32' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 32: 27th feb</span> - <span class='grassetto'>New features for our products</span></h3>
+			</div>
+			<div class='lineare'>
+				<div class='terzo'>
+					<div class='lineare_no padding_bottom_10'>
+						<img src='schema_upcloo.png' title='upcloo_schema' alt='upcloo_schema' class='img_border' />
+					</div>
+					<p class='testo_cen testo13'>A taste of magic behind UpCloo!</p>
+				</div>
+				<div class='terzo testo_cen testo20 testo_grigio_78'>
+					<br/><br/><br/><br/>
+					Now we have the coffee,<br/>
+					now we have the power!			
+				</div> 	
+				<div class='terzo destra'>
+					<div class='lineare_no padding_bottom_10'>
+						<img src='schema_xite.png' title='xite_schema' alt='xite_schema' class='img_border' />
+					</div>
+					<p class='testo_cen testo13'>A taste of magic behind our new CMS!</p>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<div id='day41' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_arancio'>Day 41: 6th mar</span> - <span class='grassetto'>Working on products</span></h3>
+			</div>
+			<div class='lineare_no'> 
+				<div class='sinistra italico testo12 margin_top_20 terzo' style='border-right:1px solid #cdcdcd;'>
+					<span class='testo13'>The office is not complete yet, <br/> <br/>
+					but even though we have only two desks<br/><br/>
+					and some other tools<br/><br/>
+					we're working hard on our products.<br/><br/>
+					We're excited to say that each new day<br/><br/>
+					the Corley Products are closer to final release.<br/>
+					</span><br/>
+					<span class='destra testo_grigio_78 margin_right_15'>Gabriele</span>
+				</div>
+				<div class='dueterzi destra'>
+					<p class='padding_left_20 testo14 testo_grigio_78 testo_des'>...thinking about product layout</p>
+					<p class='testo18 testo_cen testo_grigio_78'>testing multiple connection concurrency</p>
+					<p class='testo11 grassetto testo_rosso'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...eating pizza on the keyboard</p>
+					<div class='lineare padding_bottom_20'>
+						<span class='italico'>&nbsp;&nbsp;&nbsp;indexing web pages...</span>
+						<span class='margin_left_20 padding_left_20 testo18 testo_verde grassetto'>designing a new private search engine...</span>
+					</div>
+					<p class='testo14 testo_des'>flying into AWS new products</p>
+					<p class='testo16 testo_cen'>drinking tons of <span class='italico grassetto testo18 testo_marrone'>COFFEE!!!</span></p> 
+				</div>    
+			</div>	
+		</div>
+		
+		
+		
+		<div id='day47' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Day 47: 13th mar</span> - <span class='grassetto'>Another <i>break</i> in the wall...</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+					<img src='brick.jpg' title='brick wall' alt='brick wall' class='' />
+			</div>
+			<p class='testo_cen'>Walter, one drill, and a bicentenary wall (we need the phone cable!)</p>
+		</div>  
+		
+		
+		
+		<div id='day51' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>Day 51: 17th mar</span> - <span class='grassetto'>The Corley flag is here!</span></h3>
+			</div>
+			<div class='lineare_no'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='plexi2.jpg' title='corley flag' alt='corley flag' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='plexi1.jpg' title='corley flag' alt='corley flag' class='border' />
+				</div>
+			</div>
+		</div>  
+		
+		
+		
+		
+		
+		<div id='day61' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 61: 27th mar</span> - <span class='grassetto'>The Corley flag is ON!</span></h3>
+			</div>
+			<div class='lineare_no'>If you believe that is simple to pick up a great-plexy-heavy flag on the wall... you're in wrong! But, after two hours, we did it!</div>
+			<div class='lineare_20'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='flag-b1.jpg' title='corley flag 1' alt='corley flag 1' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='flag-b2.jpg' title='corley flag 2' alt='corley flag 2' class='border destra' />
+				</div>
+			</div>
+			<div class='lineare_20'>
+					<img src='flag-b3.jpg' title='corley flag 3' alt='corley flag 3' class='border' />
+			
+			</div>
+		</div> 
+		
+		
+		
+		<div id='day67' class='day'>    
+			<div id='day68' class='lineare_no'></div>
+			<div id='day69' class='lineare_no'></div>
+			<div class='title'>    
+				<h3><span class='testo_viola'>Days 67-69: 2nd-4th apr</span> - <span class='grassetto'>Working on the CLOUD.</span></h3>
+			</div>    
+			<div class='lineare_no'>     
+				<div>
+					<img src='cloudcms.png' title='stat upcloo'  alt='stat upcloo' class='border' />
+				</div>
+				<div class='duequinti destra'>
+					<p class='testo19'>Corley Platform is our cloud based content management system.</p>
+					<p>It provides a lot of functions developed on Amazon Web Services, like media management, users control, publishing of web pages and social sharing.</p>
+					<p>In these days we designed and tested the new infrastructure behind Corley Platform: as you can see by the picture on the left, we can serve over 150 concurrent connections thanks to our <strong>small, agile and cost affordable</strong> infrastructure.</p>       
+					<p class='testo_des testo13 italico'>soon available</p>
+				</div>    
+			</div>	
+		</div>
+		
+		
+		
+		
+		
+		
+		<div id='day76' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 76: 11th apr</span> - <span class='grassetto'><i>Yuppie</i> (or <i>nerd</i>?) inside...</span></h3>
+			</div>
+			<div class='lineare_no'>Today we took another step towards professionalism... (<i>coff... coff...</i>)</div>
+			<div class='lineare_20'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='stationery1.jpg' title='stationery 1' alt='stationery 1' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='stationery2.jpg' title='stationery 2' alt='stationery 2' class='border destra' />
+				</div>
+			</div>
+			<div class='lineare_20'>
+					<img src='stationery4.jpg' title='stationery 3' alt='stationery 3' class='border' />
+			
+			</div>
+		</div>    
+        
+           
+		<div id='day91' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>Day 91: 26th apr</span> - <span class='grassetto'>Workstation assembling</span></h3>
+			</div>  
+			<div class='lineare_no'> 
+				<div class='meta margin_top_15 testo_cen'>
+					<img src='workstation.jpg' title='workstation' alt='logo corley' class='border' />
+				</div>
+				<div class='meta destra'>	
+					<p>Finally the pc components were arrived and now are ready to be assembled.</p>
+					<p><span  class='testo19'>We choose Intel Itanium-series processors, Samsung SSD, NVIDIA GPUs, Asus Mobo, CoolerMaster cases &amp; fans, Netgear Net Storage and Microsoft Windows 7.</p>
+                    <p>The new workstations will work with our MacBooks, Ipods, Android Phones &amp; Tablets, and more... </p>
+				</div>
+			</div>
+		</div>
+        
+        
+		<div id='day103' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Day 103: 8th may</span> - <span class='grassetto'>Brochure Design</span></h3>
+			</div>
+            
+            <div class='lineare_no'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='brochure1.jpg' title='brochure 1' alt='brochure 1' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='brochure2.jpg' title='brochure 2' alt='brochure 2' class='border destra' />
+				</div>
+			</div>   
+			<div class='lineare_20'>
+                We're near to  final release of our products, so we're excited to show the italian preview of brochure design about UpCloo Services!
+            </div>
+		</div>
+        
+        
+        <div id='day110' class='day arrow_down'> 
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 110: 15th may</span> - <span class='grassetto'>Brochure printed!</span></h3>
+			</div>
+            
+            <div class='lineare_no'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='printed1.jpg' title='brochure 1 printed' alt='brochure 1 printed' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='printed2.jpg' title='brochure 2 printed' alt='brochure 2 printed' class='border destra' />
+				</div>
+			</div>   
+			<div class='lineare_20 testo_cen'>
+                And now the printed version of UpCloo brochures!
+            </div>
+		</div>
+        
+        
+       	<div id='day120' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_azzurro'>Day 120: 25th may</span> - <span class='grassetto'>A quick introduction to UpCloo Services...</span></h3>
+			</div>
+            
+            <div class='lineare_no'>
+				<div class='lineare  padding_bottom_20'>
+                    <div class='border-iframe'><iframe src="http://player.vimeo.com/video/42760264?title=0&amp;byline=0&amp;portrait=0" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                    <h3 style='margin-top:140px' class='destra testo_grigio_78'>UpCloo Correlation...&nbsp;&nbsp;</h3>
+				</div>    
+		      	<h3 class='lineare_20 testo_cen grassetto watchnow'>Turn on your speakers and <span style='font-size:35px'>WATCH NOW</span>!</h3>  
+				<div class='lineare  padding_bottom_20'>       
+                    <h3 style='margin-top:140px' class='testo_grigio_78'>... &amp; UpCloo Search</h3>
+                    <div class='destra border-iframe'><iframe src="http://player.vimeo.com/video/42958796?title=0&amp;byline=0&amp;portrait=0" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+				</div>
+			</div>           
+		</div>
+		
+		
+		<div id='day142' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Day 142: 16th jun</span> - <span class='grassetto'>Corley @ WPCON2012!</span></h3>
+			</div>
+            
+            <div class='lineare_no'>
+				<div class='meta sinistra padding_bottom_20'>
+					<img src='conf1.jpg' title='Gabriele @ wpcon' alt='Gabriele @ wpcon' class='border' />
+				</div>
+				<div class='meta destra padding_bottom_20'>
+					<img src='conf2.jpg' title='Walter @ wpcon' alt='Walter @ wpcon' class='border destra' />
+				</div>
+			</div>   
+			<div class='lineare_20 testo_cen'>
+                We were at <a href='http://www.wpcon.it' target='_blank'>First WordPress Italian Conference</a> talking about AWS integration and remote debugging!
+            </div>   
+              
+            <div class='lineare_20'>
+				<div class='meta sinistra padding_bottom_20'>
+				    <div style="width:425px" id="__ss_13366530"> <iframe src="http://www.slideshare.net/slideshow/embed_code/13366530?rel=0" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen></iframe> </div>
+				</div>
+				<div class='meta destra padding_bottom_20'>
+				<div style="width:425px" class='destra' id="__ss_13363421"><iframe src="http://www.slideshare.net/slideshow/embed_code/13363421?rel=0" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen></iframe></div>
+				</div>
+			</div>   
+		</div>  
+        
+             	
+		<div id='day155' class='day'> 
+			<div class='title'>    
+				<h3><span class='testo_viola'>Day 155: 29th jun</span> - <span class='grassetto'>A messy desk @Corley Office</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+					<img src='desk.jpg' title='desk corley' alt='desk corley' class='' />
+                    <div class='question question1 bubbletip' bt:title='Nerd cookbooks about cloud computing, design patterns, database management'>&nbsp;</div>
+                    <div class='question question2 bubbletip' bt:title='<strong>Coffeeeeeeeeeeeeeeeeeeeeee</strong>!<br/>Espresso, of course.<br/>(load average: 1/hour/person)'>&nbsp;</div>
+                    <div class='question question3 bubbletip' bt:title='Our nosql database <strong><i>PIZZINI</i></strong>.<br/>Here we store: appointments, notes and black list of enemies'>&nbsp;</div>
+                    <div class='question question4 bubbletip' bt:title='<i>...mumble...mumble...</i><br/>In-depth report & analysis<br/>on Italy/Germany SPREAD... '>&nbsp;</div>
+                    
+			</div>
+			<p class='testo_cen italico testo13 testo_grigio_78'>Move the mouse over the question points to show tooltips!</p>
+		</div>
+        
+        
+        
+        
+		
+		<div id='day169' class='day'> 
+        <a name='day169'></a>
+			<div class='title'>    
+				<h3><span class='testo_rosso'>Day 169: 13th jul</span> - <span class='grassetto' style='font-size:29px'>The CEO is busy? You can have fun waiting!</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+					<img src='pool.jpg' title='pool' alt='pool' class='border' />
+			</div>
+			<p class='testo_cen'>(...introducing our new "scalable" pool...)</p>
+		</div>  
+		             
+	</div>
+		
+	<div class='break break3'>   
+		<div class='inside'>
+			<h2 class='lineare_10'>break 3. <strong>The first 6 months have gone!</strong></h2>
+			<div class='lineare'>
+				<div class='quattroquinti'>
+					<strong>Working hard!</strong><br/><br/>
+					The first six months were like a bolt<br/>
+					At beginning we were focused on all aspects of our new business: office fornitures, brand and marketing, product design and development.<br/> 
+					Now we're working on our corporate website and <a href='http://www.upcloo.com' target='_blank'>UpCloo</a> final release.<br/>
+					We are proud to announce that we have made large test on our CMS: <strong>1 billion requests and over 380 concurrent connections</strong>, thanks to AWS. We'll write a detailed report very soon! 
+				</div>
+				<div class='quinto'> 
+					<img src='calendar.png' title='' border='0 alt='' class='destra'/>	
+				</div>
+			</div>
+		</div>
+	</div>   
+	
+	 
+	<div class='inside'>
+
+		                	
+		<div id='day183' class='day'> 
+        <a name='day183'></a>
+			<div class='title'>    
+				<h3><span class='testo_verde'>Day 183: 10th aug</span> - <span class='grassetto' style='font-size:29px'>Announcing the new UpCloo website. SIGN-UP for BETA!</span></h3>
+			</div>
+			<div class='lineare_no padding_bottom_20'>
+					<img src='upcloo-shot1.jpg' title='pool' alt='pool' class='' />
+			</div>
+			<p class='testo_cen'>Now version of UpCloo website just released. You can signup to next <strong>free public beta</strong>!</p>
+            <p class='testo_cen '>Come to <a href='http://www.upcloo.com' target='_blank' class='grassetto'>http://www.upcloo.com</a></p>
+		</div>  
+		
+	</div>
+	
+	<div class='staytuned lineare_no'>...stay tuned...</div>
+	<div class='footer'>&copy; 2012 Corley s.r.l. - P.Iva: 10669790015 - Piazza Statuto 10, 10122 Torino, Italy - <span id='gotop' class='puntatore'>go to the head</span></div>
+</div>
+	<div id='bubbletip'></div>
+		
 </body>
 </html>
