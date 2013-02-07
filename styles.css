@@ -471,7 +471,7 @@ img.sponsor {
 	display:none;
 }
 #sharefloat a:link {border:0;}
-
+a.ancor{padding-top:40px;display:block;width:100%;clear:both;}
 .staytuned {
 	          
 	margin-top:200px;

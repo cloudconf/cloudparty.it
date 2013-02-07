@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="description" content="Corley is an italian startup focused on web and cloud development." />
+<meta name="description" content="Cloud Conference - Torino 18 Aprile 2013" />
 <meta name="keyword" content="" />
 <meta name="Copyright" content="Corley" />
 <meta name="Language" content="English" />
@@ -12,6 +12,9 @@
 <meta name="publisher" content="" />
 <meta name="ICBM" content="45.030, 7.40" />
 <meta name="geo.position" content="45.030, 7.40" />
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
                                                       
 <title>Cloud Conference 2013</title>
 
@@ -65,7 +68,8 @@ window.addEvent('domready', function() {
 	
 	var links = $$('.link');
 	links.each(function(link, ii) {
-		link.addEvent('click', function() {
+		link.addEvent('click', function(evento) {
+			evento.preventDefault();
 			var iii = ii+1;
 			new Fx.Scroll(window).toElement('block'+iii);
 		});
@@ -125,10 +129,10 @@ window.addEvent('domready', function() {
         <a href='' target='_blank'><img src='twitter-shield.png' title='twitter corley' alt='twitter' class='' /></a>
     </div>-->
     <div id='fixed' class='lineare_no'>
-    	<a href='#' class='link' >La Conferenza</a>
-    	<a href='#' class='link'>Programma &amp; Biglietti</a>
-    	<a href='#' class='link'>Location</a>
-    	<a href='#' class='link'>Sponsor</a>
+    	<a href='#conferenza' class='link' >La Conferenza</a>
+    	<a href='#programma' class='link'>Programma &amp; Biglietti</a>
+    	<a href='#location' class='link'>Location</a>
+    	<a href='#sponsor' class='link'>Sponsor</a>
     	<a href='https://twitter.com/_CloudConf_' target='_blank'><img src='twitter.png' border='0' /></a>
     	<a href='https://www.facebook.com/pages/Cloud-Conf-Italia/140265592804313' target='_blank'><img src='facebook.png' border='0' /></a>
     </div>
@@ -143,7 +147,8 @@ window.addEvent('domready', function() {
 		
 		
 		<div id='block1' class='block'> 
-			<div class='title'>    
+			<a name='conferenza' class='ancor'></a>    
+			<div class='title'>
 				<h3><span class='grassetto'>La conferenza</span> - <span>Una giornata all'insegna della scalabilità</span></h3>
 			</div>
 			<div class='lineare_no' style='background:transparent url(clouds.png) top right no-repeat;'>
@@ -157,9 +162,9 @@ window.addEvent('domready', function() {
 				</div>
 			</div>
 			<div class='lineare'>
-			<div class="addthis_wrapper">
+			<div class="addthis_wrapper lineare_no">
                       <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
+<div class="addthis_toolbox addthis_default_style lineare_no">
 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 <a class="addthis_button_tweet" style='margin-left:20px;'></a>
 <a class="addthis_button_pinterest_pinit"></a>
@@ -173,6 +178,7 @@ window.addEvent('domready', function() {
 		</div>
 		
 		<div id='block2' class='block'> 
+			<a name='programma' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>Programma &amp; Biglietti</span></h3>
 			</div>
@@ -186,6 +192,7 @@ window.addEvent('domready', function() {
 		
 		
 		<div id='block3' class='block'> 
+			<a name='location' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>La Location</span></h3>
 			</div>
@@ -233,6 +240,7 @@ window.addEvent('domready', function() {
 		
 		
 		<div id='block4' class='block'> 
+			<a name='sponsor' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>Sponsor</span></h3>
 			</div>
@@ -301,6 +309,20 @@ window.addEvent('domready', function() {
 	<div class='footer'>&copy; Cloud Conference - Giovedì 18 Aprile 2013, Torino - <span id='gotop' class='puntatore'>torna in cima</span></div>
 </div>
 	<div id='bubbletip'></div>
+		
+		
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15028790-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 		
 </body>
 </html>
