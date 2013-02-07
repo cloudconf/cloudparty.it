@@ -36,12 +36,12 @@ body {
 
 /* FONTS ============================================================================= */
 h1, h2, h3, #schedule thead th, .legend dd.event_location, .btn, #site_nav ul li{
-	font-family: 'Exo', sans-serif;
+	font-family: 'Asap', sans-serif;
 }
 
 
 .grusp_header, h4{
-	font-family: 'Pacifico', cursive;
+	font-family: 'Merienda', cursive;
 	letter-spacing: 1.3px;
 }
 
@@ -267,12 +267,10 @@ html {
 
 /* Site_Header */
 #main_navigation{
-	background: transparent url(../media/img/bg_trangles_top.png) repeat-x center bottom;
-	padding-bottom: 14px;
 }
 #site_nav{
 	background: transparent url(../media/img/bg_repeat_gray.png) repeat;
-	padding-top: 10px;
+	padding: 10px 0;
 	margin: 0;
 }
 
@@ -548,7 +546,7 @@ a:hover.slides{
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Merienda', cursive;
 	letter-spacing: 1.3px;
 	font-weight: 400;
 	margin-left: -45px;
@@ -586,10 +584,13 @@ a:hover.slides{
 .map{
 	margin-bottom: 60px;
 }
-.map #map_canvas{
+.map #map_canvas, .map div.img{
 	width: 95%;
 	height: 320px;
 	border: 10px solid #fff;
+}
+.map div.img{
+	background:transparent url(/media/img/hotel.jpg) center center no-repeat;
 }
 /* legend */
 .legend dd, .legend dt{
