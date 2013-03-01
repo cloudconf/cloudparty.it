@@ -12,38 +12,71 @@
 <meta name="publisher" content="" />
 <meta name="ICBM" content="45.030, 7.40" />
 <meta name="geo.position" content="45.030, 7.40" />
-
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-                                                      
 <title>Cloud Conference 2013</title>
 
-<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                                                      
+
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css' />
 
      
 <script type="text/javascript" src="principale.js"></script>
 
-<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="styles.css?r=1" rel="stylesheet" type="text/css" media="screen" />
 
 
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script>
+
+var sx_hide = function() {
+	this.hide();
+}
+function sx_alert(tipo, titolo, messaggio, opt, durata) {
+	var SM = false;
+	//if(durata) mopt['onAppend']=function() {SM.hide().delay(durata);}
+	switch(tipo) {
+		case "pickup": {    
+			SM = new SimpleModal(opt);
+			var messaggio = $(messaggio).get('html');
+			SM.show({
+				"title":titolo,
+				"contents":messaggio
+			});
+			if(durata) sx_hide.delay(durata, SM);
+			break;
+		}
+		case "alert": {    
+			SM = new SimpleModal();   
+			//SM.addButton("{{close}}", "btn primary");
+			SM.show({
+		        "title":titolo,
+		        "contents":messaggio
+		      });
+		      if(durata) sx_hide.delay(durata, SM);
+			break;
+		}
+	}
+}
+
+
 	function initialize_map() {
-	        var mapOptions = {
-	          zoom: 15,
-	          center: new google.maps.LatLng(45.069626, 7.665389),
-	          mapTypeId: google.maps.MapTypeId.ROADMAP
-	        }
-	        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-	        var hotel = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.067664, 7.66542),
-	            map: map,
-	            icon: 'marker.png',
-				title:"Hotel Amasciatori"
-	        });
-
+	       if(googl) {
+				var mapOptions = {
+		          zoom: 15,
+		          center: new google.maps.LatLng(45.069626, 7.665389),
+		          mapTypeId: google.maps.MapTypeId.ROADMAP
+		        }
+		        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	
+		        var hotel = new google.maps.Marker({
+		            position: new google.maps.LatLng(45.067664, 7.66542),
+		            map: map,
+		            icon: 'marker.png',
+					title:"Hotel Amasciatori"
+		        });
+		      }
 
 	      }
     </script>
@@ -51,10 +84,14 @@
 <script type='text/javascript'>  
 window.addEvent('domready', function() {  
 	
-	initialize_map();
+	$$('.program2').fade(0.6);
+	
+	sx_alert("alert", "aleee", "aleeee", false, 100000);
+	
+	//initialize_map();
 
 	
-	today=new Date()
+	/*today=new Date()
 	var birthday=new Date(2012, 0, 27);
 	var one_day=1000*60*60*24
 	var days =Math.ceil((today.getTime()-birthday.getTime())/(one_day));
@@ -87,50 +124,19 @@ window.addEvent('domready', function() {
 			'top': [el.getStyle('top'), scroll.y+250]
 		});
 	}
-
-	/*var liv1Dim=$('liv1').getPosition();
-	$('sharefloat').setStyle('left', liv1Dim.x+990);
-	morph_sharefloat = new Fx.Morph($('sharefloat'), {duration:500, transition: Fx.Transitions.Linear});
-	var floatshow=false;
-	window.addEvents({
-    'scroll': function(){
-    	if(!floatshow) {
-			floatshow=true;$('sharefloat').reveal(); 
-		}
-        (function() {update_pos(morph_sharefloat, $('sharefloat'));}).delay(1000)
-      }
-	     
-	});*/
 		
 
 });
 </script>
 
-		<!-- 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32091906-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
--->
+		
 </head>
 <body> 
 <div class='lineare_no' id='liv0'>
-    <!-- <div id='sharefloat'>
-        <a href='' target='_blank'><img src='linkedin-shield.png' title='linkedin corley' alt='linkedin' class='' /></a>
-        <a href='' target='_blank'><img src='twitter-shield.png' title='twitter corley' alt='twitter' class='' /></a>
-    </div>-->
     <div id='fixed' class='lineare_no'>
     	<a href='#conferenza' class='link' >La Conferenza</a>
-    	<a href='#programma' class='link'>Programma &amp; Biglietti</a>
+    	<a href='#programma' class='link'>Programma</a>
+    	<a href='#biglietti' class='link'>Biglietti</a>
     	<a href='#location' class='link'>Location</a>
     	<a href='#sponsor' class='link'>Sponsor</a>
     	<a href='https://twitter.com/_CloudConf_' target='_blank'><img src='twitter.png' border='0' /></a>
@@ -155,43 +161,199 @@ window.addEvent('domready', function() {
 				<div class='trequarti'>			
 					
 		            <p><strong>Il Cloud Computing rappresenta la nuova rivoluzione informatica.</strong></p>
-		            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> è un punto di incontro per tutti gli sviluppatori web italiani, le startup ed i professionisti del settore IT che desiderano approfondire le possibilità offerte dalle tecnologie Cloud.</p>
-		            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento attraverso il tema comune della scalabilità.</p>
+		            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> si propone con evento di riferimento e punto di incontro tra gli addetti del setttore e le nuove tecnologie.</p>
+		            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento che toccherà <strong>PHP, MySQL, NoSQL, NodeJs, Sviluppo mobile, Big Data</strong> attraverso il tema comune della scalabilità</p>
 		            <p>La Cloud Conference è un appuntamento imperdibile tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
 				
 				</div>
 			</div>
 			<div class='lineare'>
-			<div class="addthis_wrapper lineare_no">
-                      <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style lineare_no">
-<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-<a class="addthis_button_tweet" style='margin-left:20px;'></a>
-<a class="addthis_button_pinterest_pinit"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511288d075bcec8a"></script>
-<!-- AddThis Button END -->
-                        <!-- AddThis Button END -->
-					</div>
+				<div class="addthis_wrapper lineare_no">
+	                      <!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style lineare_no">
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	<a class="addthis_button_tweet" style='margin-left:20px;'></a>
+	<a class="addthis_button_pinterest_pinit"></a>
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511288d075bcec8a"></script>
+	<!-- AddThis Button END -->
+	                        <!-- AddThis Button END -->
+				</div>
 			</div>
 		</div>
 		
 		<div id='block2' class='block'> 
-			<a name='programma' class='ancor'></a> 
+			<a name='biglietti' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>Programma &amp; Biglietti</span></h3>
 			</div>
-			<div class='lineare_no testo_cen' >
+			<div class='programs lineare_25'>
+				<div class='program  program2'>
+					<div class='quinto'>09:00 - 09:30</div>
+					<div class='trequarti'>
+						<h3>Registrazione</h3>
+					</div>
+				</div>
+				<div class='program'>
+					<div class='quinto'>09:30 - 09:40</div>
+					<div class='trequarti'>
+						<h3>Apertura e Benvenuto</h3> 
+						<p>Introduzione dell'evento e dei relatori</p>
+					</div>
+				</div>
+				<div class='program'>
+					<div class='quinto'>09:40 - 10:25</div>
+					<div class='trequarti talkaws'>
+						<h3>Amazon.com's Journey to the Cloud</h3>
+						<p class='speaker'>speech ufficiale da Amazon Web Services</p>
+						<p>Una introduzione al Cloud Computing ed ai servizi di <a href='http://aws.amazon.com' target='_blank'>Amazon Web Services</a> attraverso il percorso di utilizzo fatto da uno dei suoi Clienti più significativi... <strong>Amazon.com</strong></p>
+					</div>
+				</div>
+		
+				<div class='program'>
+					<div class='quinto'>10:25 - 10:55</div>
+					<div class='trequarti talkphp'>
+						<h3>PHP e MySQL incontrano il Cloud: scalabilità senza limiti</h3>
+						<p class='speaker'>di Gabriele Mittica</p>
+						<p>Problemi, soluzioni e tecnologie adottate per fa scalare un classico applicativo <strong>PHP</strong>. Scopriamo le potenzialità offerte dal Cloud, i problemi di performance e gestione di un applicativo caratterizzato da traffico intenso e le soluzioni e strategie da adottare: dalla gestione delle sessioni all' alta disponibilità, dalla scalabilità dei database alla distribuzione dei file statici. </p>
+					</div>
+				</div>
+			
+				<div class='program  program2'>
+					<div class='quinto'>10:55 - 11:15</div>
+					<div class='trequarti coffee'>
+						<h3>Coffee break!</h3>
+					</div>
+				</div>
+			
+				<div class='program'>
+					<div class='quinto'>11:15 - 12:00</div>
+					<div class='trequarti'>
+						<h3>Sviluppo mobile cross-platform e cloud-based con Trigger.io</h3>
+						<p class='speaker'>di James Brady</p>
+						<p>
+						James Brady, fondatore di <a href='http://www.trigger.io' target='_blank'>Trigger.io</a>, company nata dal prestigioso <a href='http://www.ycombinator.com' target='_blank'>YCombinator</a>, ci mostra come servizi cloud based e architetture ibride ci permettano di creare <strong>applicazioni mobile</strong> di qualità senza dover aprire Xcode o Eclipse.
+						</p> 
+					</div>
+				</div>
+			
+				<div class='program'>
+					<div class='quinto'>12:00 - 12:45</div>
+					<div class='trequarti talkaws'>
+						<h3>Con Amazon Web Services ogni servizio è una risorsa programmabile</h3>
+						<p class='speaker'>speech ufficiale da Amazon Web Services</p>
+						<p>Il Cloud Computing non è solo "macchine virtuali che scalano", ma un intero ecosistema di servizi pensati per diventare parte integrante del nostro codice. Per dimostrarlo implementiamo assieme un gioco online usando <strong>HTML5, WebSocket</strong> e le risorse di Amazon Web Services.</p>
+					</div>
+				</div>
+				
+				
+				<div class='program  program2'>
+					<div class='quinto'>12:45 - 14:00</div>
+					<div class='trequarti pizza'>
+						<h3>Pausa</h3>
+					</div>
+				</div>
+				
+				
+				<div class='program'>
+					<div class='quinto'>14:00 - 14:45</div>
+					<div class='trequarti'>
+						<h3>Creare una piattaforma cloud based di analisi semantica in tempo reale</h3>
+						<p class='speaker'>di Craig Edmunds</p>
+						<p>
+						Il Natural Language Processing permette di analizzare automaticamente il linguaggio umano, ma cosa fare se si necessita di gestire informazioni in tempo reale e integrarle con accuratezza in un processo di transazione economica?
+						<a href='http://www.whisk.com' target='_blank'>Whisk</a> permette agli utenti di comprare ingredienti per qualsiasi ricetta trovata online, grazie ad un processo che analizza e interpreta incredibili quantità di dati attraverso diverse tecnologie.
+						Il co-founder Craig Edmunds ci guida attraverso la tecnologia Whisk che coinvolge <strong>MongoDB, RabbitMQ, Redis e Scala/Akka</strong> su RackSpace Cloud.
+						</p>
+					</div>
+				</div>
+				
+				<div class='program'>
+					<div class='quinto'>14:45 - 15:15</div>
+					<div class='trequarti'>
+						<h3>Zend Developer Cloud: sviluppo di applicazioni PHP professionali nel cloud
+						</h3>
+						<p class='speaker'>di Enrico Zimuel</p>
+						<p>
+						<strong>Zend Developer Cloud</strong> è una piattaforma sviluppata da Zend Technologies
+per lo sviluppo di applicazioni <strong>PHP</strong> professionali in ambienti cloud.
+Senza nessun tipo di installazione è possibile iniziare a sviluppare
+in PHP usufruendo di un ambiente di monitoring del codice, uno
+strumento potente di debug e un ambiente di auto scaling per qualsiasi
+esigenza di traffico e performance. Inoltre, grazie all'utilizzo delle
+API offerte dalla Zend Application Fabric è possibile utilizzare
+qualsiasi infrastruttura cloud, come ad esempio RightScale, Amazon Web
+Service, Rackspace, IBM o HP Cloud Services. In questo talk verrà
+presentata la piattaforma gratuita <a href='http://www.phpcloud.com' target='_blank'>phpcloud.com</a> con una dimostrazione
+pratica d'utilizzo.
+						</p>
+					</div>
+				</div>
+				
+				<div class='program  program2'>
+					<div class='quinto'>15:15 - 15:30</div>
+					<div class='trequarti coffee'>
+						<h3>Coffee break!</h3>
+					</div>
+				</div>
+				
+				<div class='program'>
+					<div class='quinto'>15:30 - 16:15</div>
+					<div class='trequarti'>
+						<h3>Passare dai db relazionali al modello a grafi</h3>
+						<p class='speaker'>di Luca Garulli</p>
+						<p>
+						Per oltre 30 anni i database DBMS come MySQL hanno dettato le regole su come progettare e gestire la persistenza dei dati. Da pochi anni il movimento <strong>NoSQL</strong> ha iniziato ad offrire un approccio alternativo. Questa sessione analizzerà il modello a Grafi e come esso possa essere utilizzato con successo da sviluppatori pratici dei database relazionali.
+						</p>
+					</div>
+				</div>
+				
 					
-		        <p class="testo_cen">Il programma è in fase di definizione. La conferenza si terrà il 18 aprile dalle 9:30 alle 17:30</p>
-        		<p class="testo_cen"><strong>Rimanete collegati, i biglietti saranno disponibili fra pochi giorni!</strong></p>				
-        		<p class="testo_cen"><img src='cloud.png' border='0' alt='cloud' /></p>				
+				<div class='program'>
+					<div class='quinto'>16:15 - 16:45</div>
+					<div class='trequarti'>
+						<h3>Big Data: la nuova frontiera dell'analisi dei dati</h3>
+						<p class='speaker'>di Walter Dal Mut</p>
+						<p>Il concetto di Big Data è sicuramente uno dei più discussi in questi anni. In questo talk vedremo come l'aumento costante delle informazioni da analizzare necessiti anche di tecnologie adatte all'estrapolazione di informazioni. Hadoop ed i linguaggi di scripting legati a questo framework saranno oggetto della nostra discussione così da vedere come, in pochi e semplici passi, sia possibile affrontare l'analisi dei dati con tecniche di <strong>Map Reduce</strong>.</p>
+					</div>
+				</div>
+	
+				
+				<div class='program'>
+					<div class='quinto'>16:45 - 17:15</div>
+					<div class='trequarti'>
+						<h3>OpenStack: introduzione, deploy e gestione di un cloud privato</h3>
+						<p class='speaker'>di Flavio Percoco</p>
+						<p>
+							"OpenStack è un <i>sistema operativo</i>" per il cloud pensato per gestire grosse architetture, pronto per scalare ed in grado di astrarre tutte le gestioni infrastrutturali di virtualizzazione, networking e storage.
+							Questo talk offre un'introduzione ad <a href='http://www.openstack.org' target='_blank'>OpenStack</a>, la sua architettura, i suoi moduli e metodi di deploy. 
+						</p>
+					</div>
+				</div>
+				
+				
+				<div class='program program2'>
+					<div class='quinto'>17:15 - 17:45</div>
+					<div class='trequarti'>
+						<h3>Chiusura e networking</h3>
+					</div>
+				</div>
+				
+				
+			</div>
+		
+			
+		<div id='block3' class='block'> 
+			<div class='lineare_no testo_cen' >
+				<h3>Solo per pochi posti il biglietto scontato a 19,90 &euro;!</h3>
+				<div class='lineare' ><iframe  src="http://www.eventbrite.it/tickets-external?eid=5668239858&ref=etckt&v=2" frameborder="0" height="280" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Registrazione evento</a><span style="color:#ddd;"> per </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://cloudconference2013.eventbrite.it?ref=etckt">CloudConf Italia 2013</a> <span style="color:#ddd;">con tecnologia</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it?ref=etckt">Eventbrite</a></div></div>
+				<div class='lineare testo_cen'>La Cloud Conference è un evento divulgativo. Non si vende alcun servizio o prodotto. Il nostro obiettivo è contribuire alla crescita della comunità tecnologica italiana.</div>
 			</div>
 		</div>
 		
 		
-		<div id='block3' class='block'> 
+		<div id='block4' class='block'> 
 			<a name='location' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>La Location</span></h3>
@@ -209,7 +371,7 @@ window.addEvent('domready', function() {
 				<div class='quinto' style='margin-left:8%;'>
 					<p><strong>In Treno</strong></p>
 					 <p>
-		                <a href='http://www.trenitalia.com/' target='_blank'>Trenitalia</a> e <a href='http://www.italotreno.it' target='_blank'>ItaloTreno</a> con provenienza Milano e nord Italia fermano alla <strong>Stazione di Porta Susa, a 200 metri dalla conferenza</strong>: dal binario uscire dalla <strong>scala A</strong> sul lato Piazza VIII Dicembre, e proseguire a piedi lungo corso Vittorio Emanuele II.<br/>
+		                <a href='http://www.trenitalia.com/' target='_blank'>Trenitalia</a> e <a href='http://www.italotreno.it' target='_blank'>ItaloTreno</a> con provenienza Milano e nord Italia fermano alla <strong>Stazione di Porta Susa, a 200 metri dalla conferenza</strong>: dal binario uscire dalla <strong>scala A</strong> sul lato Piazza XVIII Dicembre, e proseguire a piedi lungo corso Vittorio Emanuele II.<br/>
 		                Invece, dalla stazione Porta Nuova prendere la metropolitana in direzione Fermi e scendere alla fermata Vinzaglio, a 50 metri dall'Hotel Ambasciatori.
 		            </p>
 				</div>
@@ -239,7 +401,7 @@ window.addEvent('domready', function() {
 		
 		
 		
-		<div id='block4' class='block'> 
+		<div id='block5' class='block'> 
 			<a name='sponsor' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>Sponsor</span></h3>
@@ -254,7 +416,7 @@ window.addEvent('domready', function() {
 		        
 				<div class='lineare'>&nbsp;</div>   
 				<div class='lineare'>    
-					<h3><span class='grassetto'>Sponsorsorizza</span></h3>
+					<h3><span class='grassetto'>Sponsorizza</span></h3>
 				</div>
         		
         		<div class='lineare'>
@@ -274,42 +436,16 @@ window.addEvent('domready', function() {
         			
 			</div>
 		</div>
-		
-	<!-- </div>
-		
-	<div class='break break1'>   
-		<div class='inside'>
-			<h2 class='lineare_10'>break 1. <strong>Who we are?</strong></h2>
-			<div class='lineare'>
-				<div class='duequinti'>
-					<strong>Gabriele Mittica</strong><br/><br/>
-					Gabriele is a 28 years old web developer with a long experience on dynamic websites.<br/>
-					He worked over 6 years on content management systems development and frontend designing. Now he's focused on AWS integration with CMS.<br/>
-					He loves dogs, trekking and soccer.<br/> 
-				</div>
-				<div class='destra duequinti'> 
-					<strong>Walter Dal Mut</strong><br/><br/>
-					Walter is a 28 years old web developer with a great experience with web engineering systems.<br/>
-					He can provide a powerful experience with PhP, Java and cloud based architectures designed to grant scalable and high-performance availability.<br/>
-					He loves cats, swimming and rugby. 
-				</div>
-			</div>
-		</div>
-	</div>   
-	
-	
-	 
-	<div class='inside'>
-	-->
+
 		
 		
 </div>
 	
-	<div class='staytuned lineare_no'>...stay tuned...</div>
+	<div class='staytuned lineare_no'>ti aspettiamo!</div>
 	<div class='footer'>&copy; Cloud Conference - Giovedì 18 Aprile 2013, Torino - <span id='gotop' class='puntatore'>torna in cima</span></div>
 </div>
-	<div id='bubbletip'></div>
-		
+
+
 		
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -323,6 +459,9 @@ window.addEvent('domready', function() {
   })();
 
 </script>
+		
+</div>
+
 		
 </body>
 </html>
