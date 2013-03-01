@@ -21,44 +21,18 @@
 <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css' />
 
      
-<script type="text/javascript" src="principale.js"></script>
+<script type="text/javascript" src="mootools-1.4.1-core.js"></script>
+<script type="text/javascript" src="mootools-1.4.0.1-more.js"></script>
+<script type="text/javascript" src="simple-modal.js"></script>
 
 <link href="styles.css?r=1" rel="stylesheet" type="text/css" media="screen" />
 
 
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script>
+<script type='text/javascript'>
 
-var sx_hide = function() {
-	this.hide();
-}
-function sx_alert(tipo, titolo, messaggio, opt, durata) {
-	var SM = false;
-	//if(durata) mopt['onAppend']=function() {SM.hide().delay(durata);}
-	switch(tipo) {
-		case "pickup": {    
-			SM = new SimpleModal(opt);
-			var messaggio = $(messaggio).get('html');
-			SM.show({
-				"title":titolo,
-				"contents":messaggio
-			});
-			if(durata) sx_hide.delay(durata, SM);
-			break;
-		}
-		case "alert": {    
-			SM = new SimpleModal();   
-			//SM.addButton("{{close}}", "btn primary");
-			SM.show({
-		        "title":titolo,
-		        "contents":messaggio
-		      });
-		      if(durata) sx_hide.delay(durata, SM);
-			break;
-		}
-	}
-}
+
 
 
 	function initialize_map() {
@@ -84,10 +58,40 @@ window.addEvent('domready', function() {
 	
 	$$('.program2').fade(0.6);
 	
-	//sx_alert("alert", "aleee", "aleeee", false, 100000);
-	
 	initialize_map();
 
+	var modal = {
+		title: "I biglietti sono finalmente disponibili! A soli 19,90 &euro;!",
+		contents: "La Cloud Conference è un grande evento per tutti i prossionisti, sviluppatori e aziende del settore IT e Web.<br/><br/>I biglietti sono ora disponibili!",
+		go: false
+			
+	}
+	switch (window.location.search) {
+	
+		case "?php" : 
+			modal.title = "Pensi che PHP non possa scalare?";
+			modal.contents = "Alla Cloud Conference dimostreremo il contrario! Vieni a scoprire le strategie e i servizi per far scalare il tuo applicatibo PHP e MySQL. Rimarrai sopreso!";
+			modal.go = true;
+		break;
+		
+		case "?ticket":
+			modal.go = true;
+		break;
+		
+
+		case "?aws" : 
+			modal.title = "Con il biglietto 25$ di credito su Amazon Web Services!";
+			modal.contents = "La Cloud Conference punta a diventare il primo grande evento italiano sul Cloud Computing.<br/><br/>Per questa occasione, comprando il biglietto per l'evento otterrai un <strong>coupon di 25$ di credito gratuito</strong> da usare su AWS!";
+			modal.go = true;
+		break;
+	}
+	
+	if(modal.go) {
+		SM = new SimpleModal({width:600});             
+    	SM.show(modal);
+	}
+		
+	  
 	
 	/*today=new Date()
 	var birthday=new Date(2012, 0, 27);
@@ -376,7 +380,7 @@ pratica d'utilizzo.
 				<div class='quinto' style='margin-left:8%;'>
 					<p><strong>In Aereo</strong></p>
 					 <p>
-		                <strong>Da Caselle Aeroporto</strong>: prendere la <a href='http://www.sadem.it/upload/orari/estivi/000268.pdf' target='_blank'>navetta</a> che ferma alla Stazione di Porta Susa, a 250 metri dalla conferenza.
+		                <strong>Da Caselle Aeroporto</strong>: prendere la <a href='http://www.sadem.it/upload/orari/estivi/000268.pdf' target='_blank'>navetta</a> che ferma alla Stazione di Porta Susa, da li preoseguire a piedi lungo corso Vittorio Emanuele II..
 		            </p>
 				</div>
 				<div class='quinto destra' >
@@ -459,6 +463,7 @@ pratica d'utilizzo.
 </script>
 		
 </div>
+
 
 		
 </body>

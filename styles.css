@@ -410,7 +410,7 @@ h3.bonze {
 .block {
 	clear: both;
 	width:100%;
-	margin-top:400px;
+	margin-top:200px;
 	padding-top:50px;
 }
 .block .title {
@@ -757,9 +757,9 @@ img.slimbox_thumb {
   position: absolute;
   position: fixed;
   margin: 0;
-  color: #808080;
+  color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 18px;
   background-color: #FFFFFF;
