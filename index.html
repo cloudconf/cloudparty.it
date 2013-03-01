@@ -39,7 +39,8 @@
 				var mapOptions = {
 		          zoom: 15,
 		          center: new google.maps.LatLng(45.069626, 7.665389),
-		          mapTypeId: google.maps.MapTypeId.ROADMAP
+		          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		          scrollwheel: false
 		        }
 		        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	
@@ -157,17 +158,15 @@ window.addEvent('domready', function() {
 		<div id='block1' class='block'> 
 			<a name='conferenza' class='ancor'></a>    
 			<div class='title'>
-				<h3><span class='grassetto'>La conferenza</span> - <span>Una giornata all'insegna della scalabilità</span></h3>
+				<h3 class='testo_sin'><span class='grassetto'>La conferenza</span> - <span>Una giornata all'insegna della scalabilità</span></h3>
 			</div>
 			<div class='lineare_no' style='background:transparent url(clouds.png) top right no-repeat;'>
 				<div class='trequarti'>			
-					
 		            <p><strong>Il Cloud Computing rappresenta la nuova rivoluzione informatica.</strong></p>
 		            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> si propone con evento di riferimento e punto di incontro tra gli addetti del setttore e le nuove tecnologie.</p>
 		            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento che toccherà <strong>PHP, MySQL, NoSQL, NodeJs, Sviluppo mobile, Big Data</strong> attraverso il tema comune della scalabilità</p>
 		            <p>La Cloud Conference è un appuntamento imperdibile tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
-				
-				</div>
+		        </div>
 			</div>
 			<div class='lineare'>
 				<div class="addthis_wrapper lineare_no">
@@ -183,10 +182,13 @@ window.addEvent('domready', function() {
 	                        <!-- AddThis Button END -->
 				</div>
 			</div>
+			<div class='lineare_no'>
+				<p>La vendita dei <a href='#biglietti'>biglietti</a> è finalmente aperta! E grazie ad <strong>Amazon Web Services</strong> siamo lieti di offrire ad ogni partecipante un coupon di 25$ di credito da usare su <a href='http://aws.amazon.com' target='_blank'>AWS</a>!</p>
+			</div>
 		</div>
 		
 		<div id='block2' class='block'> 
-			<a name='biglietti' class='ancor'></a> 
+			<a name='programma' class='ancor'></a> 
 			<div class='title'>    
 				<h3><span class='grassetto'>Programma &amp; Biglietti</span></h3>
 			</div>
@@ -347,8 +349,9 @@ pratica d'utilizzo.
 		
 			
 		<div id='block3' class='block'> 
+			<a name='biglietti' class='ancor'></a> 
 			<div class='lineare_no testo_cen' >
-				<h3>Solo per pochi posti il biglietto scontato a 19,90 &euro;!</h3>
+				<h3>Solo per pochi posti il biglietto scontato a 19,90 &euro;! E ottieni gratis un coupon da 25$ per AWS!</h3>
 				<div class='lineare' ><iframe  src="http://www.eventbrite.it/tickets-external?eid=5668239858&ref=etckt&v=2" frameborder="0" height="280" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Registrazione evento</a><span style="color:#ddd;"> per </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://cloudconference2013.eventbrite.it?ref=etckt">CloudConf Italia 2013</a> <span style="color:#ddd;">con tecnologia</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it?ref=etckt">Eventbrite</a></div></div>
 				<div class='lineare testo_cen'>La Cloud Conference è un evento divulgativo. Non si vende alcun servizio o prodotto. Il nostro obiettivo è contribuire alla crescita della comunità tecnologica italiana.</div>
 			</div>
