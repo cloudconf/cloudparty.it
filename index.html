@@ -62,7 +62,6 @@ function sx_alert(tipo, titolo, messaggio, opt, durata) {
 
 
 	function initialize_map() {
-	       if(googl) {
 				var mapOptions = {
 		          zoom: 15,
 		          center: new google.maps.LatLng(45.069626, 7.665389),
@@ -76,7 +75,6 @@ function sx_alert(tipo, titolo, messaggio, opt, durata) {
 		            icon: 'marker.png',
 					title:"Hotel Amasciatori"
 		        });
-		      }
 
 	      }
     </script>
@@ -88,7 +86,7 @@ window.addEvent('domready', function() {
 	
 	//sx_alert("alert", "aleee", "aleeee", false, 100000);
 	
-	//initialize_map();
+	initialize_map();
 
 	
 	/*today=new Date()
