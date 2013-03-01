@@ -62,16 +62,17 @@ window.addEvent('domready', function() {
 	initialize_map();
 
 	var modal = {
-		title: "I biglietti sono finalmente disponibili! A soli 19,90 &euro;!",
-		contents: "La Cloud Conference è un grande evento per tutti i prossionisti, sviluppatori e aziende del settore IT e Web.<br/><br/>I biglietti sono ora disponibili!",
+		title: "Prenota subito il tuo biglietto a soli 19,90 &euro;!",
+		contents: "La Cloud Conference è un grande evento per tutti i professionisti, sviluppatori e aziende del settore IT e Web.<br/><br/>I biglietti sono ora disponibili!",
 		go: false
+		
 			
 	}
 	switch (window.location.search) {
 	
 		case "?php" : 
 			modal.title = "Pensi che PHP non possa scalare?";
-			modal.contents = "Alla Cloud Conference dimostreremo il contrario! Vieni a scoprire le strategie e i servizi per far scalare il tuo applicatibo PHP e MySQL. Rimarrai sopreso!";
+			modal.contents = "Alla Cloud Conference dimostreremo il contrario! Vieni a scoprire le strategie ed i servizi per far scalare il tuo applicativo PHP e MySQL. Rimarrai sopreso!";
 			modal.go = true;
 		break;
 		
@@ -85,10 +86,22 @@ window.addEvent('domready', function() {
 			modal.contents = "La Cloud Conference punta a diventare il primo grande evento italiano sul Cloud Computing.<br/><br/>Per questa occasione, comprando il biglietto per l'evento otterrai un <strong>coupon di 25$ di credito gratuito</strong> da usare su AWS!";
 			modal.go = true;
 		break;
+
+		case "?sponsor" : 
+			modal.title = "Sponsorizza l'evento!";
+			modal.contents = "La Cloud Conference punta a diventare il primo grande evento italiano sul Cloud Computing.<br/><br/>Abbiamo aperto il <i>call for sponsor</i>, a partire da soli <strong>300 euro</strong>: è un'occasione unica per aumentare la visibilità della propria azienda attraverso un evento dedicato alle nuove tecnologie!";
+			modal.go = true;
+		break;
+
+		case "?nosql" : 
+			modal.title = "Cloud Computing e NoSQL!";
+			modal.contents = "Alla Cloud Conference parleremo anche di NoSQL, con talk specifici che toccheranno <strong>OrientDB, mongoDB, DynamoDB e Redis</strong>!";
+			modal.go = true;
+		break;
 	}
 	
 	if(modal.go) {
-		SM = new SimpleModal({width:600});             
+		SM = new SimpleModal({width:600, btn_ok: "Ottima notizia! (chiudi la finestra)"});             
     	SM.show(modal);
 	}
 		
