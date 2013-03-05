@@ -355,7 +355,7 @@ h3.gold {
 }
 h3.silver {
 	font-size:25px;
-	color:#eaeaea;
+	color:#777;
 }
 h3.bonze {
 	font-size:20px;
@@ -680,8 +680,10 @@ img.slimbox_thumb {
 	padding:25px 0 0 0;
 }
 .programs .program .trequarti {
+	width:66%;
 	width:79%;
 	border-left:2px solid #eaeaea;
+	padding:15px 13% 15px 0;
 	padding:15px 0;
 }
 .programs .program h3,.programs .program p {
@@ -695,9 +697,15 @@ img.slimbox_thumb {
 	font-size:13px;
 	color:#566;
 }
-.programs .program h3,.programs .program p.author {
+.programs .program h3,.programs .program p.speaker {
 	font-size:14px;
-	colro:#000;
+	color:#000;
+}
+.programs .program p.speaker {
+	font-size:15px;
+}
+.programs .program p.speaker a{
+	color:#196b9a;
 }
 .programs .program h3{
 	font-weight:bold;
@@ -712,7 +720,18 @@ img.slimbox_thumb {
 .programs .program strong {
 	color:#000;
 }
-
+.programs .program a.twitter {
+	border:0;
+	text-decoration:none;
+}
+.programs .program a.twitter img {
+	vertical-align:middle;
+}
+/*
+.program .aws { background: transparent url(talk-aws.png) center right no-repeat; }
+.program .corley { background: transparent url(talk-corley.png) center right no-repeat; }
+.program .zend { background: transparent url(talk-zend.png) center right no-repeat; }
+**/
 .tip_mini {
 	padding:10px;
 	background:#000;
