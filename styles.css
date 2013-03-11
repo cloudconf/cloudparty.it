@@ -437,7 +437,15 @@ img.office {
 }
 img.sponsor {
 	border:1px solid #777;
-	padding:3px;
+	padding:5px;
+	margin:15px;
+}
+.sponsormedia a {
+	display:inline-block;
+}
+.sponsormedia img {
+	padding:5px;
+	height:80px;
 }
 .break {
 	height:240px;
