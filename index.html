@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -64,8 +65,8 @@ window.addEvent('domready', function() {
 	initialize_map();
 
 	var modal = {
-		title: "Prenota subito il tuo biglietto a soli 19,90 &euro;!",
-		contents: "La Cloud Conference è un grande evento per tutti i professionisti, sviluppatori e aziende del settore IT e Web.<br/><br/>I biglietti sono ora disponibili!",
+		title: "Solo per pochi giorni il biglietto scontato a 19,90 &euro;!",
+		contents: "Grazie alla grande richiesta di biglietti, abbiamo deciso di <strong>prolungare la vendita dei biglietti scontati fino al 28 marzo</strong>.<br/><br/>Non perdere l'occasione di partecipare alla Cloud Conference: un grande evento per tutti i professionisti, sviluppatori e aziende del settore IT e Web!",
 		go: false
 		
 			
@@ -98,6 +99,10 @@ window.addEvent('domready', function() {
 		case "?nosql" : 
 			modal.title = "Cloud Computing e NoSQL!";
 			modal.contents = "Alla Cloud Conference parleremo anche di NoSQL, con talk specifici che toccheranno <strong>OrientDB, mongoDB, DynamoDB e Redis</strong>!";
+			modal.go = true;
+		break;
+		
+		default:
 			modal.go = true;
 		break;
 	}
@@ -180,7 +185,7 @@ window.addEvent('domready', function() {
 		            <p><strong>Il Cloud Computing rappresenta la nuova rivoluzione informatica.</strong></p>
 		            <p>Negli ultimi anni, le tecnologie scalabili stanno offrendo nuove possibilità di sviluppo e lavoro. La <strong>CloudConference</strong> si propone con evento di riferimento e punto di incontro tra gli addetti del setttore e le nuove tecnologie.</p>
 		            <p>Abbiamo invitato relatori da aziende leader del settore per offrire una giornata di apprendimento che toccherà <strong>PHP, MySQL, NoSQL, NodeJs, Sviluppo mobile, Big Data</strong> attraverso il tema comune della scalabilità</p>
-		            <p>La CloudConference è un appuntamento imperdibile tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
+		            <p>La CloudConference è un appuntamento imperdibile per tutte le <strong>aziende</strong> che desiderano approcciarsi alle tecnologie cloud, <strong>sviluppatori</strong> interessati ad evolvere il proprio metodo di programmazione, e <strong>startup</strong> che vogliono scoprire come il Cloud Computing offra infinite possibilità di crescita senza richiedere budget astronomici.</p>
 		        </div>
 			</div>
 			<div class='lineare'>
@@ -366,8 +371,8 @@ pratica d'utilizzo.
 		<div id='block3' class='block'> 
 			<a name='biglietti' class='ancor'></a> 
 			<div class='lineare_no testo_cen' >
-				<h3>Solo per pochi posti il biglietto scontato a 19,90 &euro;! E ottieni gratis un coupon da 25$ per AWS!</h3>
-				<div class='lineare' ><iframe  src="http://www.eventbrite.it/tickets-external?eid=5668239858&ref=etckt&v=2" frameborder="0" height="312" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Registrazione evento</a><span style="color:#ddd;"> per </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://cloudconference2013.eventbrite.it?ref=etckt">CloudConf Italia 2013</a> <span style="color:#ddd;">con tecnologia</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it?ref=etckt">Eventbrite</a></div></div>
+				<h3>Solo entro il 28 marzo il biglietto scontato a 19,90 &euro;! E ottieni gratis un coupon da 25$ per AWS!</h3>
+				<div class='lineare' ><iframe  src="http://www.eventbrite.it/tickets-external?eid=5668239858&ref=etckt&v=2" frameborder="0" height="360" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Registrazione evento</a><span style="color:#ddd;"> per </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://cloudconference2013.eventbrite.it?ref=etckt">CloudConf Italia 2013</a> <span style="color:#ddd;">con tecnologia</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it?ref=etckt">Eventbrite</a></div></div>
 				<div class='lineare testo_cen'>La CloudConference è un evento divulgativo. Non si vende alcun servizio o prodotto. Il nostro obiettivo è contribuire alla crescita della comunità tecnologica italiana.</div>
 			</div>
 		</div>
@@ -449,6 +454,9 @@ pratica d'utilizzo.
 		        	<a href='http://www.html.it' target='_blank'><img src='sponsor_html.png' class='sponsor' /></a>
 		        	<a href='http://www.masterin.it' target='_blank'><img src='sponsor_master.png' class='sponsor' /></a>
 		        	<a href='http://www.tomshw.it' target='_blank'><img src='sponsor_toms.png' class='sponsor' /></a>
+		        	<a href='http://www.hostingtalk.it' target='_blank'><img src='sponsor_hostingtalk.png' class='sponsor' /></a>
+		        	<a href='http://www.juliusdesign.net/' target='_blank'><img src='sponsor_julius.png' class='sponsor' /></a>
+		        	<a href='http://www.codeinvaders.net' target='_blank'><img src='sponsor_code.png' class='sponsor' /></a>
 		        </div>
 		        
 				<div class='lineare'>&nbsp;</div>   
