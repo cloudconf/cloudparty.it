@@ -127,12 +127,14 @@ window.addEvent('domready', function() {
 		break;
 		
 		default:
+			modal.title = "I biglietti stanno finendo!";
+			modal.contents = "Oggi è <strong>l'ultimo giorno</strong> per acquistare il biglietto per la Cloud Conference. Rimangono pochi tagliandi, non perdere tempo!";
 			modal.go = false;
 		break;
 	}
 	
 	if(modal.go) {
-		SM = new SimpleModal({width:600, btn_ok: "Ottima notizia! (chiudi la finestra)"});             
+		SM = new SimpleModal({width:600, btn_ok: "Ok! (chiudi la finestra)"});             
     	SM.show(modal);
 	}
 		
@@ -468,7 +470,8 @@ pratica d'utilizzo.
 		        	<a href='http://www.nuvolabase.com' target='_blank'><img src='sponsor_nuvola.png' class='sponsor' /></a>
 		        	<a href='http://jobs.redhat.com/' target='_blank'><img src='sponsor_redhat.jpg' class='sponsor' /></a>
 		        	<a href='http://www.criticalcase.com/' target='_blank'><img src='sponsor_critical.jpg' class='sponsor' /></a>
-		        	<a href='http://www.contur.it/' target='_blank'><img src='sponsor_contur.png' class='sponsor' /></a>
+		        	<br/><a href='http://www.contur.it/' target='_blank'><img src='sponsor_contur.png' class='sponsor' /></a>
+		        	<a href='http://www.neen.it/' target='_blank'><img src='sponsor_neen.png' class='sponsor' /></a>
 		        </div>
 		        
 		        
