@@ -17,11 +17,11 @@
 
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-                                                      
+
 
 <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css' />
 
-     
+
 <script type="text/javascript" src="mootools-1.4.1-core.js"></script>
 <script type="text/javascript" src="mootools-1.4.0.1-more.js"></script>
 <script type="text/javascript" src="simple-modal.js"></script>
@@ -53,48 +53,48 @@
 	      }
     </script>
 
-<script type='text/javascript'>  
-window.addEvent('domready', function() {  
-	
+<script type='text/javascript'>
+window.addEvent('domready', function() {
+
 	$$('.program2').fade(0.6);
-	
+
 	initialize_map();
 
 	var modal = {
 		title: "Vieni gratis al CloudParty 2013 al TAG di Milano!",
 		contents: "Il CloudParty è un evento imperdibile dedicato a sviluppatori, startup e responsabili IT. Ti aspettiamo venerdì 27 settembre al TAG di Milano. L'evento è <strong>gratuito</strong>, prenota il tuo biglietto!",
 		go: true
-		
-			
+
+
 	}
 	switch (window.location.search) {
-	
-		case "?php" : 
+
+		case "?php" :
 			modal.title = "Pensi che PHP non possa scalare?";
 			modal.contents = "Alla Cloud Conference dimostreremo il contrario! Vieni a scoprire le strategie ed i servizi per far scalare il tuo applicativo PHP e MySQL. Rimarrai sopreso!";
 			modal.go = true;
 		break;
 	}
-	
+
 	if(modal.go) {
-		SM = new SimpleModal({width:600, btn_ok: "Ok! (chiudi la finestra)"});             
+		SM = new SimpleModal({width:600, btn_ok: "Ok! (chiudi la finestra)"});
     	SM.show(modal);
 	}
-		
-	  
-	
+
+
+
 	/*today=new Date()
 	var birthday=new Date(2012, 0, 27);
 	var one_day=1000*60*60*24
 	var days =Math.ceil((today.getTime()-birthday.getTime())/(one_day));
 	//$('blocks').set('html', days);
-	
+
 	/**$('menu').getElements('span').each(function(day) {
 		var dd=day.get('html').toInt();
 		if(dd>days) day.destroy();
 	});
 	$('menu').reveal();*/
-	
+
 	var links = $$('.link');
 	links.each(function(link, ii) {
 		link.addEvent('click', function(evento) {
@@ -103,27 +103,27 @@ window.addEvent('domready', function() {
 			new Fx.Scroll(window).toElement('block'+iii);
 		});
 	});
-	
+
 	$('gotop').addEvent('click', function() {
 		new Fx.Scroll(window).toTop();
 	});
-	
-	
-		
+
+
+
 	var update_pos = function(fxc, el){
 		var scroll = window.getScroll();
 		fxc.start({
 			'top': [el.getStyle('top'), scroll.y+250]
 		});
 	}
-		
+
 
 });
 </script>
 
-		
+
 </head>
-<body> 
+<body>
 <div class='lineare_no' id='liv0'>
     <div id='fixed' class='lineare_no'>
     	<a href='#conferenza' class='link' >Evento</a>
@@ -134,48 +134,48 @@ window.addEvent('domready', function() {
     	<a href='https://twitter.com/_CloudConf_' target='_blank'><img src='twitter.png' border='0' /></a>
     	<a href='https://www.facebook.com/pages/Cloud-Conf-Italia/140265592804313' target='_blank'><img src='facebook.png' border='0' /></a>
     </div>
-	
-	
+
+
 	<div class='inside' id='liv1'>
 		<div class='lineare_no' id='header'>
 			<h2>Venerdì 27 Settembre 2013, a Milano</h2>
 			<h1>CloudParty: Database in cloud</h1>
 			<h3>Tecnologie e metodi per gestire il proprio DB sulla nuvola</h3>
 		</div>
-		
-		
-		<div id='block1' class='block' > 
-			<a name='conferenza' class='ancor'></a>    
+
+
+		<div id='block1' class='block' >
+			<a name='conferenza' class='ancor'></a>
 			<div class='lineare_no' style='background:transparent url(/clouds.png) top right no-repeat;'>
 				<div class='title'>
 					<h3 class='testo_sin'><span class='grassetto'>La conferenza</span> - <span>Un pomeriggio all'insegna della scalabilità</span></h3>
 				</div>
 					<div class='lineare_no'>
-						<div class='trequarti'>			
+						<div class='trequarti'>
 				            <p>La <a href='http://www.cloudconf.it' target='_blank'>CloudConference</a> del 18 Aprile 2013 a Torino si è rivelata un autentico successo. Per questo abbiamo deciso di organizzare eventi a tappe, della durata di un pomeriggio, con l'obiettivo di scoprire insieme le ultime novità sul Cloud, mettere in contatto startup e professionisti, e socializzare attraverso spazi di networking dedicati.</p>
 				        </div>
 					</div>
-					
+
 					<div class="lineare_25">
                          <div class='quarto' >
 							<h3 class='testo_sin testo20'>Ambiente dinamico</h3>
 							<p>Un evento dedicato a tutti gli sviluppatori, startup e professionisti IT, ospitato nel contesto dinamico del TAG di Milano e composto da diversi talk sul tema comune dei database.
 				        </p>
 						</div>
-					
+
                         <div class='quarto' style='margin-left:4%;'>
 							<h3 class='testo_sin testo20'>Biglietto gratuito</h3>
 							<p>Il CloudParty è un evento gratuito, perchè vuole essere un punto di incontro e condivisione, una possibilità per ogni partecipante di allargare la propria visione e approcciarsi a nuove tecnologie.</p>
 						</div>
-					
+
                          <div class='quarto' style='margin-left:4%;'>
 							<h3 class='testo_sin testo20'>Rinfresco &amp; Networking</h3>
 							<p>Il CloudParty è anche una festa, un momento per rilassarsi e fare nuove conoscenze. Per questo verrà offerto un rinfresco a tutti partecipanti durante il quale conoscersi e approfondire.  </p>
 						</div>
 					</div>
 			</div>
-				
-			
+
+
 			<div class='lineare'>
 				<div class="addthis_wrapper lineare_no">
 	                      <!-- AddThis Button BEGIN -->
@@ -194,83 +194,107 @@ window.addEvent('domready', function() {
 				<p>Prenota gratuitamente il tuo <a href='#biglietti'>biglietto</a>, non perdere tempo!</p>
 			</div>
 		</div>
-		
-		<div id='block2' class='block'> 
-			<a name='programma' class='ancor'></a> 
-			<div class='title'>    
+
+		<div id='block2' class='block'>
+			<a name='programma' class='ancor'></a>
+			<div class='title'>
 				<h3><span class='grassetto'>Programma &amp; Biglietti</span></h3>
-				<p class="testo_cen">Il programma è in fase di definizione e proporrà diversi interventi tecnici nel corso del pomeriggio prevedendo un rinfresco finale per tutti i partecipanti   !</p>
+				<!--<p class="testo_cen">Il programma è in fase di definizione e proporrà diversi interventi tecnici nel corso del pomeriggio prevedendo un rinfresco finale per tutti i partecipanti   !</p>-->
 			</div>
-			<div class='programs lineare_25 invisibile'>
-				
+			<div class='programs lineare_25'>
+
 				<div class='program'>
 					<div class='quinto'>14:00 - 14:20</div>
 					<div class='trequarti'>
-						<h3>Benvenuti al CloudParty!</h3> 
+						<h3>Benvenuti al CloudParty!</h3>
 						<p>Introduzione dell'evento e dei relatori</p>
 					</div>
 				</div>
-				
+
 				<div class='program'>
 					<div class='quinto'>14:20 - 15:00</div>
 					<div class='trequarti corley'>
-						<h3>Big Data: la nuova frontiera dell'analisi dei dati</h3>
-						<p class='speaker'>di <a href='http://walterdalmut.com' target='_blank'>Walter Dal Mut</a> (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-						<p>Il concetto di Big Data è sicuramente uno dei più discussi in questi anni. In questo talk vedremo come l'aumento costante delle informazioni da analizzare necessiti anche di tecnologie adatte all'estrapolazione di informazioni. Hadoop ed i linguaggi di scripting legati a questo framework saranno oggetto della nostra discussione così da vedere come, in pochi e semplici passi, sia possibile affrontare l'analisi dei dati con tecniche di <strong>Map Reduce</strong>.</p>
+						<h3>Libero Cloud: MongoDB su piattaforma Joyent</h3>
+						<p class='speaker'>di <a href='http://cloud.libero.it/it/' target='_blank'>Antonio Bevacqua</a>
+                        (<a href='http://cloud.libero.it/it/' target='_blank'>Libero Cloud</a>, <a
+                            href='https://twitter.com/CloudLibero_it' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
+						<!--<p>In questo talk vedremo le soluzioni Database in Cloud visto da Libero sulla piattaforma
+                        Joyent. Grazie alla partecipazione di ... vedremo uno use case reale di applicazione del Cloud
+                        per la scalabilità <strong>MongoDB</strong> utilizzata per quest'applicazione</p>-->
+                        <p>In aggiornamento...</p>
 					</div>
 				</div>
-	
-				
+
+
 				<div class='program'>
 					<div class='quinto'>15:00 - 15:40</div>
 					<div class='trequarti corley'>
-						<h3>Big Data: la nuova frontiera dell'analisi dei dati</h3>
+						<h3>How to: Scale-Out MySQL - Problemi e Soluzioni</h3>
 						<p class='speaker'>di <a href='http://walterdalmut.com' target='_blank'>Walter Dal Mut</a> (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-						<p>Il concetto di Big Data è sicuramente uno dei più discussi in questi anni. In questo talk vedremo come l'aumento costante delle informazioni da analizzare necessiti anche di tecnologie adatte all'estrapolazione di informazioni. Hadoop ed i linguaggi di scripting legati a questo framework saranno oggetto della nostra discussione così da vedere come, in pochi e semplici passi, sia possibile affrontare l'analisi dei dati con tecniche di <strong>Map Reduce</strong>.</p>
+                        <p>Durante questa sessione ci occuperemo della maggior parte delle problematiche relative
+                        all'utilizzo del database relazione <strong>MySQL</strong>. Come predisporre un'istanza "trasparente" per essere
+                        sempre disponibili (<strong>Shadow Instances</strong> - <strong>AWS MultiAZ</strong>). Scalare le letture con replicazione asincrona
+                        <strong>Master/Slave</strong>, scalare le scritture con una soluzione
+                        <strong>Master/Master</strong>. Problemi e soluzione nella replicazione multi-master per la
+                        tecnologia MySQL.</p>
 					</div>
 				</div>
-	
+
 				<div class='program  program2'>
 					<div class='quinto'>15:40 - 16:00</div>
 					<div class='trequarti coffee'>
 						<h3>Break!</h3>
 					</div>
 				</div>
-			
-				
+
+
 				<div class='program'>
 					<div class='quinto'>16:00 - 16:40</div>
 					<div class='trequarti corley'>
-						<h3>Big Data: la nuova frontiera dell'analisi dei dati</h3>
-						<p class='speaker'>di <a href='http://walterdalmut.com' target='_blank'>Walter Dal Mut</a> (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-						<p>Il concetto di Big Data è sicuramente uno dei più discussi in questi anni. In questo talk vedremo come l'aumento costante delle informazioni da analizzare necessiti anche di tecnologie adatte all'estrapolazione di informazioni. Hadoop ed i linguaggi di scripting legati a questo framework saranno oggetto della nostra discussione così da vedere come, in pochi e semplici passi, sia possibile affrontare l'analisi dei dati con tecniche di <strong>Map Reduce</strong>.</p>
+						<h3>OrientDB on the Cloud - Un approccio pratico</h3>
+                        <p class='speaker'>di
+                        <a href='http://www.nuvolabase.com/site/' target='_blank'>Luigi Dell'aquila</a> (<a href='http://www.nuvolabase.com/site/' target='_blank'>OrientDB</a>, <a href='https://twitter.com/ldellaquila' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+                        <a href='http://www.nuvolabase.com/site/' target='_blank'>Gabriele De Carli</a> (<a href='http://www.nuvolabase.com/site/' target='_blank'>OrientDB</a>)
+                        </p>
+                        <p><strong>OrientDB</strong> è un <strong>graph/document</strong> database nato e sviluppato attorno ai concetti e ai linguaggi
+                        web. Vediamo insieme come utilizzarlo per creare un'architettura <strong>in cloud</strong> per sviluppare
+                        applicazione distribuite su piattaform diverse.</p>
 					</div>
 				</div>
-				
+
 				<div class='program'>
 					<div class='quinto'>16:40 - 17:15</div>
 					<div class='trequarti corley'>
-						<h3>Big Data: la nuova frontiera dell'analisi dei dati</h3>
-						<p class='speaker'>di <a href='http://walterdalmut.com' target='_blank'>Walter Dal Mut</a> (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-						<p>Il concetto di Big Data è sicuramente uno dei più discussi in questi anni. In questo talk vedremo come l'aumento costante delle informazioni da analizzare necessiti anche di tecnologie adatte all'estrapolazione di informazioni. Hadoop ed i linguaggi di scripting legati a questo framework saranno oggetto della nostra discussione così da vedere come, in pochi e semplici passi, sia possibile affrontare l'analisi dei dati con tecniche di <strong>Map Reduce</strong>.</p>
+						<h3>Redis, the key-value DB faster than you.</h3>
+						<p class='speaker'>di <a href='http://www.sysapparchitect.com' target='_blank'>Luca Cipriani</a> (<a
+                            href='http://www.sysapparchitect.com' target='_blank'>SysApp Architect</a>, <a href='https://twitter.com/mastrolinux' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
+                        <p>Applicazioni real time, logging, scalibilità, sharding, le infinite possibilità attuali di
+                        Redis con uno sguardo alla futura versione 3.</p>
+                        <p>
+                        * Oltre le sessioni: pub/sub (chat), <strong>hipache</strong>, <strong>AWS ElastiCache</strong> for <strong>Redis</strong><br/>
+                        * <u>Master/slave</u> config (il problema di Twilio)<br/>
+                        * <u>Partitioning</u>: Client side partitioning, proxy partitioning (twemproxy), query routing<br/>
+                        * Il futurog: <strong>partial resync e sentinel, cluster</strong><br/>
+                        * Redis come logger e/o queue broker (esempi con logstash e app logging)<br/>
+                        </p>
 					</div>
 				</div>
-	
+
 				<div class='program  program2'>
 					<div class='quinto'>17:15</div>
 					<div class='trequarti coffee'>
 						<h3>Rinfresco!</h3>
 					</div>
 				</div>
-				
-				
-							
-				
+
+
+
+
 			</div>
-		
-			
-		<div id='block3' class='block'> 
-			<a name='biglietti' class='ancor'></a> 
+
+
+		<div id='block3' class='block'>
+			<a name='biglietti' class='ancor'></a>
 			<div class='lineare_no testo_cen' >
 				<h3>Prenota ora il tuo biglietto per il CloudParty al TAG di Milano</h3>
 				<div class='lineare' >
@@ -280,11 +304,11 @@ window.addEvent('domready', function() {
 				<div class='lineare testo_cen'>CloudParty e CloudConference sono eventi divulgativi. Non si vende alcun servizio o prodotto. Il nostro obiettivo è contribuire alla crescita della comunità tecnologica italiana.</div>
 			</div>
 		</div>
-		
-		
-		<div id='block4' class='block'> 
-			<a name='location' class='ancor'></a> 
-			<div class='title'>    
+
+
+		<div id='block4' class='block'>
+			<a name='location' class='ancor'></a>
+			<div class='title'>
 				<h3><span class='grassetto'>La Location</span></h3>
 			</div>
 		     <p class="testo_cen">L'evento si svolgerà nel rinomato Talent Garden di Milano, in via Merano 16, presso la fermata della metro Rovereto della linea rossa.</p>
@@ -300,7 +324,7 @@ window.addEvent('domready', function() {
 				<div class='quarto' style='margin-left:8%;'>
 					<p><strong>In Treno e metropolitana</strong></p>
 					 <p>
-					 	Dalle principali stazioni milanesi servite dalla metro, raggiungere la linea Rossa in direzione Sesto I Maggio (<a href='http://www.nbts.it/index.php/mappa-metropolitana-milano.html' target='_blank'>mappa metro</a>) 
+					 	Dalle principali stazioni milanesi servite dalla metro, raggiungere la linea Rossa in direzione Sesto I Maggio (<a href='http://www.nbts.it/index.php/mappa-metropolitana-milano.html' target='_blank'>mappa metro</a>)
 		             </p>
 				</div>
 				<div class='quarto' style='margin-left:8%;'>
@@ -311,43 +335,43 @@ window.addEvent('domready', function() {
 				</div>
 			</div>
 		</div>
-		
-		
-		
-		<div  class='block'> 
+
+
+
+		<div  class='block'>
 			<h3><span class='grassetto'></span></h3>
 			<div class='lineare testo_cen'><a href='https://twitter.com/_CloudConf_' target='_blank'><img src='follow.png' alt='' /></a></div>
 			<div class='lineare testo_cen testo13 italico'>non dimenticare di seguirci su Twitter!</div>
 		</div>
-		
-		
-		
-		<div id='block5' class='block'> 
-			<a name='sponsor' class='ancor'></a> 
-			<div class='title'>    
+
+
+
+		<div id='block5' class='block'>
+			<a name='sponsor' class='ancor'></a>
+			<div class='title'>
 				<h3><span class='grassetto'>Sponsor</span></h3>
 			</div>
 			<div class='lineare_no testo_cen' >
-					
-		        
+
+
 		        <div class='lineare_20'><h3 class='gold'><i>Gold</i></h3></div>
 		        <div class='lineare_20 testo_cen'>
 		        	<a href='http://www.corley.it' target='_blank'><img src='sponsor_corley.png' class='sponsor' /></a>
 		        	<a href='http://cloud.libero.it/it/' target='_blank'><img src='sponsor_libero.png' class='sponsor' /></a>
 		        </div>
-		        
+
 		        <div class='lineare_20'><h3 class='silver'><i>Silver</i></h3></div>
 		        <div class='lineare_20 testo_cen'>
 		        	<a href='http://www.criticalcase.com/' target='_blank'><img src='sponsor_critical.jpg' class='sponsor'  style='height:120px;'/></a>
 		        </div>
-		        
+
 		        <div class='lineare_20'><h3 class='silver'><i>Bronze</i></h3></div>
 		        <div class='lineare_20 testo_cen'>
 		        	<a href='http://www.neen.it/' target='_blank'><img src='sponsor_neen.png' class='sponsor' style='height:100px;' /></a>
                     <a href='http://www.nuvolabase.com' target='_blank'><img src='sponsor_nuvola.png' class='sponsor' style='height:100px;' /></a>
 		        </div>
-		        
-		        
+
+
 		        <!-- <div class='lineare_20 invisibile'><h3><i>Con la collaborazione di </i></h3></div>
 		        <div class='lineare_20 testo_cen sponsormedia invisibile'>
 		        	<a href='http://torino.grusp.org/' target='_blank'><img src='sponsor_pug.png' class='sponsor' /></a>
@@ -361,32 +385,32 @@ window.addEvent('domready', function() {
 		        	<a href='http://www.codeinvaders.net' target='_blank'><img src='sponsor_code.png' class='sponsor' /></a>
 		        </div>
 		        -->
-		        
-				<div class='lineare'>&nbsp;</div>   
-				<div class='lineare'>    
+
+				<div class='lineare'>&nbsp;</div>
+				<div class='lineare'>
 					<h3><span class='grassetto'>Sponsorizza</span></h3>
 				</div>
-        		
+
         		<div class='lineare'>
         				<p>CloudParty è una iniziativa possibile anche grazie all'impegno e supporto degli sponsor.</p>
         				<p>L'evento si propone come conferenza di riferimento per il Cloud Computing in Italia, e rappresenta una <strong>grande occasione</strong> per aumentare la visibilità della propria azienda.</p>
         				<p>Per informazioni a riguardo, <a href='mailto:cloudconf@corley.it'>contattateci</a>.</p>
         			</div>
         		</div>
-        			
+
 			</div>
 		</div>
 
-		
-		
+
+
 </div>
-	
+
 	<div class='staytuned lineare_no'>ti aspettiamo!</div>
 	<div class='footer'>&copy; CloudParty - Venerdì 27 Settembre 2013, Torino - <span id='gotop' class='puntatore'>torna in cima</span></div>
 </div>
 
 
-		
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-15028790-12']);
@@ -399,10 +423,10 @@ window.addEvent('domready', function() {
   })();
 
 </script>
-		
+
 </div>
 
 
-		
+
 </body>
 </html>
