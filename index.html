@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="description" content="CloudParty - Milano, 23 Settembre 2013" />
+<meta name="description" content="CloudParty - Bologna 31 Gennaio 2014" />
 <meta name="keyword" content="" />
 <meta name="Copyright" content="Corley" />
 <meta name="Language" content="English" />
@@ -13,7 +13,7 @@
 <meta name="publisher" content="" />
 <meta name="ICBM" content="45.030, 7.40" />
 <meta name="geo.position" content="45.030, 7.40" />
-<title>CloudParty 2013 - 27 settembre al TAG di Milano</title>
+<title>CloudParty 2014 - 31 gennaio al T3LAB di Bologna</title>
 
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -37,17 +37,17 @@
 	function initialize_map() {
 			var mapOptions = {
 	          zoom: 15,
-	          center: new google.maps.LatLng(45.49751, 9.22122),
+	          center: new google.maps.LatLng(44.522274 ,11.346878),
 	          mapTypeId: google.maps.MapTypeId.ROADMAP,
 	          scrollwheel: false
 	        }
 	        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
 	        var hotel = new google.maps.Marker({
-	            position: new google.maps.LatLng(45.49751, 9.22122),
+	            position: new google.maps.LatLng(44.522274, 11.346878),
 	            map: map,
 	            icon: 'marker.png',
-				title:"TAG MILANO"
+				title:"T3LAB BOLOGNA"
 	        });
 
 	      }
@@ -63,7 +63,7 @@ window.addEvent('domready', function() {
 	var modal = {
 		title: "Un grazie a tutti i partecipanti!",
 		contents: "Il primo CloudParty si è concluso! Trovi le slide nella sezione <i>programma</i>. Ti aspettiamo al prossimo CloudParty di gennaio!",
-		go: true
+		go: false;
 
 
 	}
@@ -121,7 +121,24 @@ window.addEvent('domready', function() {
 });
 </script>
 
-
+<style type="text/css">
+#liv0 {
+  background-image:url(bologna-bg.jpg);
+}
+#fixed {
+  background-image:url(bologna-fixed_bg.png);
+  border-bottom:2px solid #41870d;
+}
+.programs .program p.speaker a {
+  color:#41870d;
+}
+#map_canvas_over{
+  background-color:#41870d;
+}
+img.sponsor {
+  height:100px;
+}
+</style>
 </head>
 <body>
 <div class='lineare_no' id='liv0'>
@@ -138,9 +155,9 @@ window.addEvent('domready', function() {
 
 	<div class='inside' id='liv1'>
 		<div class='lineare_no' id='header'>
-			<h2>Venerdì 27 Settembre 2013, a Milano</h2>
-			<h1>CloudParty: Database in cloud</h1>
-			<h3>Tecnologie e metodi per gestire il proprio DB sulla nuvola</h3>
+			<h2>Venerdì 31 Gennaio 2014, a Bologna</h2>
+			<h1>CloudParty: Javascript e Client Side</h1>
+			<h3>Tecnologie e metodi per integrare javascript e dispositivi con la nuvola</h3>
 		</div>
 
 
@@ -152,14 +169,14 @@ window.addEvent('domready', function() {
 				</div>
 					<div class='lineare_no'>
 						<div class='trequarti'>
-				            <p>La <a href='http://www.cloudconf.it' target='_blank'>CloudConference</a> del 18 Aprile 2013 a Torino si è rivelata un autentico successo. Per questo abbiamo deciso di organizzare eventi a tappe, della durata di un pomeriggio, con l'obiettivo di scoprire insieme le ultime novità sul Cloud, mettere in contatto startup e professionisti, e socializzare attraverso spazi di networking dedicati.</p>
+				            <p>La <a href='http://www.cloudconf.it' target='_blank'>CloudConference</a> del 18 Aprile 2013 a Torino si è rivelata un autentico successo. Per questo abbiamo deciso di organizzare eventi a tappe, della durata di un pomeriggio, con l'obiettivo di scoprire insieme le ultime novità sul Cloud, mettere in contatto startup e professionisti, e socializzare attraverso spazi di networking dedicati. Il <a href="/milano2013.html">primo CloudParty</a> si è tenuto a Milano lo scorso 27 settembre.</p>
 				        </div>
 					</div>
 
 					<div class="lineare_25">
                          <div class='quarto' >
 							<h3 class='testo_sin testo20'>Ambiente dinamico</h3>
-							<p>Un evento dedicato a tutti gli sviluppatori, startup e professionisti IT, ospitato nel contesto dinamico del TAG di Milano e composto da diversi talk sul tema comune dei database.
+							<p>Un evento dedicato a tutti gli sviluppatori, startup e professionisti IT, composto da diversi talk sul JavaScripe sul Client Side Scripting, opsitato nel dinamico contesto bolognese.
 				        </p>
 						</div>
 
@@ -214,31 +231,28 @@ window.addEvent('domready', function() {
 				<div class='program'>
 					<div class='quinto'>14:20 - 15:00</div>
 					<div class='trequarti corley'>
-						<h3>OrientDB: on the Cloud - Un approccio pratico</h3>
-                        <p class='speaker'>di
-                        <a href='http://www.orientdb.org/' target='_blank'>Luigi Dell'aquila</a> (<a href='http://www.orientdb.org' target='_blank'>OrientDB</a>, <a href='https://twitter.com/ldellaquila' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
-                        <a href='http://www.orientdb.org/' target='_blank'>Gabriele De Carli</a> (<a href='http://www.orientdb.org' target='_blank'>OrientDB</a>)
-                        </p>
-                        <p><a style='color:#ff0000' target='_blank' href='http://www.slideshare.net/LuigiDellAquila/orient-db-on-the-cloud-cloud-party-2013'>scarica le slide</a></p>
-                       
-                        <p><strong>OrientDB</strong> è un <strong>graph/document</strong> database nato e sviluppato attorno ai concetti e ai linguaggi
-                        web. Vediamo insieme come utilizzarlo per creare un'architettura <strong>in cloud</strong> per sviluppare
-                        applicazione distribuite su piattaform diverse.</p>
+						<h3>Titolo talk 1</h3>
+             <p class='speaker'>di 
+             <a href='' target='_blank'>Nome cognome</a> (<a href='' target='_blank'>Company</a>, <a href='' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <!-- <p><a style='color:#ff0000' target='_blank' href=''>scarica le slide</a></p>-->
+            
+             <p>Abstract</p>
 					</div>
 				</div>
 
 
 				<div class='program'>
 					<div class='quinto'>15:00 - 15:40</div>
-					<div class='trequarti corley'>
-                        <h3>MongoDB: iniziare sulla nuvola con Libero Cloud + Joyent</h3>
-						<p class='speaker'>di <a href='http://cloud.libero.it/it/' target='_blank'>Antonio Bevacqua</a>
-                        (<a href='http://cloud.libero.it/it/' target='_blank'>Cloud Specialist ITNet</a>, <a
-                            href='https://twitter.com/starthappy_it' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-                            <p><a style='color:#ff0000' target='_blank' href='/slide/liberocloud.pptx'>scarica le slide</a> | <a style='color:#ff0000' target='_blank' href='/slide/soccersquare.pdf'>soccersquare</a></p>
-                       
-                        <h3 style="font-size:0.9em">Use Case: SoccerSquare</h3>
-                    </div>
+          <div class='trequarti corley'>
+            <h3>Titolo talk 2 </h3>
+             <p class='speaker'>di 
+             <a href='' target='_blank'>Nome cognome</a> (<a href='' target='_blank'>Company</a>, <a href='' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <!-- <p><a style='color:#ff0000' target='_blank' href=''>scarica le slide</a></p>-->
+            
+             <p>Abstract</p>
+          </div>
 				</div>
 
 				<div class='program  program2'>
@@ -250,39 +264,29 @@ window.addEvent('domready', function() {
 
 
 				<div class='program'>
-					<div class='quinto'>16:00 - 16:40</div>
-					<div class='trequarti corley'>
-						<h3>Redis: the key-value DB faster than you.</h3>
-						<p class='speaker'>di <a href='http://www.sysapparchitect.com' target='_blank'>Luca Cipriani</a> (<a
-                            href='http://www.sysapparchitect.com' target='_blank'>SysApp Architect</a>, <a href='https://twitter.com/mastrolinux' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-                        <p><a style='color:#ff0000' target='_blank' href='https://speakerdeck.com/mastrolinux/redis-the-db-faster-than-you'>scarica le slide</a></p>
-                       
-                        <p>Applicazioni real time, logging, scalibilità, sharding, le infinite possibilità attuali di
-                        Redis con uno sguardo alla futura versione 3.</p>
-                        <p>
-                        * Oltre le sessioni: pub/sub (chat), <strong>hipache</strong>, <strong>AWS ElastiCache</strong> for <strong>Redis</strong><br/>
-                        * <u>Master/slave</u> config (il problema di Twilio)<br/>
-                        * <u>Partitioning</u>: Client side partitioning, proxy partitioning (twemproxy), query routing<br/>
-                        * Il futurog: <strong>partial resync e sentinel, cluster</strong><br/>
-                        * Redis come logger e/o queue broker (esempi con logstash e app logging)<br/>
-                        </p>
-					</div>
+					<div class='quinto'>16:00 - 16:45</div>
+          <div class='trequarti corley'>
+            <h3>Titolo talk 3</h3>
+             <p class='speaker'>di 
+             <a href='' target='_blank'>Nome cognome</a> (<a href='' target='_blank'>Company</a>, <a href='' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <!-- <p><a style='color:#ff0000' target='_blank' href=''>scarica le slide</a></p>-->
+            
+             <p>Abstract</p>
+          </div>
 				</div>
 
 				<div class='program'>
-					<div class='quinto'>16:40 - 17:15</div>
-					
-					<div class='trequarti corley'>
-						<h3>MySQL: How to Scale-Out - Problemi e Soluzioni</h3>
-						<p class='speaker'>di <a href='http://walterdalmut.com' target='_blank'>Walter Dal Mut</a> (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
-						<p><a style='color:#ff0000' target='_blank' href='http://www.slideshare.net/corleycloud/mysql-scale-out-cloudparty-2013-milano-talent-garden'>scarica le slide</a></p>
-                        <p>Durante questa sessione ci occuperemo della maggior parte delle problematiche relative
-                        all'utilizzo del database relazione <strong>MySQL</strong>. Come predisporre un'istanza "trasparente" per essere
-                        sempre disponibili (<strong>Shadow Instances</strong> - <strong>AWS MultiAZ</strong>). Scalare le letture con replicazione asincrona
-                        <strong>Master/Slave</strong>, scalare le scritture con una soluzione
-                        <strong>Master/Master</strong>. Problemi e soluzione nella replicazione multi-master per la
-                        tecnologia MySQL.</p>
-					</div>
+					<div class='quinto'>16:45 - 17:15</div>
+          <div class='trequarti corley'>
+            <h3>Titolo talk 4</h3>
+             <p class='speaker'>di 
+             <a href='' target='_blank'>Nome cognome</a> (<a href='' target='_blank'>Company</a>, <a href='' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <!-- <p><a style='color:#ff0000' target='_blank' href=''>scarica le slide</a></p>-->
+            
+             <p>Abstract</p>
+          </div>
 
 				</div>
 
@@ -317,27 +321,27 @@ window.addEvent('domready', function() {
 			<div class='title'>
 				<h3><span class='grassetto'>La Location</span></h3>
 			</div>
-		     <p class="testo_cen">L'evento si svolgerà nel rinomato Talent Garden di Milano, in via Merano 16, presso la fermata della metro Rovereto della linea rossa.</p>
-		     <p class="testo_cen"><strong><a href='http://milano.talentgarden.it/' target='_blank'>TAG Milano</a></strong><br/>Via Merano 16, Milano</p>
+		     <p class="testo_cen">L'evento si svolgerà nel rinomato T3LAB di Bologna, in via Sario Bassanelli 16, presso la fermata della metro Rovereto della linea rossa.</p>
+		     <p class="testo_cen"><strong><a href='http://www.t3lab.it/' target='_blank'>T3LAB Bologna</a></strong><br/>via Sario Bassanelli 16</p>
 			<div class='lineare_20' id='map_canvas_over'>
 				<div class='lineare_no' id='map_canvas'></div>
 			</div>
 			<div class='lineare_20'>
 				<div class='quarto'>
 					<p><strong>In Auto</strong></p>
-					<p>Dall'autostrada, seguire le indicazioni per il centro e viale Monza (sul navigatore potete cercare Via Merano 16)</p>
+					<p>Uscire all’uscita n. 6 della tangenziale e proseguire verso il centro città. Dopo aver superato il sottopasso ferroviario svoltare subito a sinistra in via Bassanelli. Il laboratorio si trova a piano terra della Fondazione Aldini (è possibile parcheggiare gratuitamente all’interno del parcheggio della Fondazione).</p>
 				</div>
+        <div class='quarto' style='margin-left:8%;'>
+          <p><strong>In Autobus</strong></p>
+           <p>
+            Dalla Stazione centrale camminare per 50 metri verso la pensilina dei bus urbani dell’autostazione dei bus (via Indipendenza) e prendere una qualsiasi linea del 27 (A, B o C è indifferente) direzione Corticella (periferia) e scendere alla fermata “Istituto Aldini”, ovvero dopo 6 fermate. La linea 27 ha una frequenza di 5-7 minuti.
+                </p>
+        </div>
 				<div class='quarto' style='margin-left:8%;'>
 					<p><strong>In Treno e metropolitana</strong></p>
 					 <p>
-					 	Dalle principali stazioni milanesi servite dalla metro, raggiungere la linea Rossa in direzione Sesto I Maggio (<a href='http://www.nbts.it/index.php/mappa-metropolitana-milano.html' target='_blank'>mappa metro</a>)
-		             </p>
-				</div>
-				<div class='quarto' style='margin-left:8%;'>
-					<p><strong>In Autobus</strong></p>
-					 <p>
-					 	Consigliata la Linea 1 (Castelli - Greco) con fermata Rovereto, distante soli 500 metri dal TAG.
-		            </p>
+					 	La stazione di Bologna Centrale è comodamente raggiungibile sulla rete ad alta velocità grazie ai molteplici collegamenti con le stazioni di Milano, firenze, Roma, Torino, Napoli, Venezia (<a href="http://www.trenitalia.it" target="_blank">Trenitalia</a>, <a href="http://www.italo.it" target="_blank">Italo</a>).
+		       </p>
 				</div>
 			</div>
 		</div>
@@ -360,36 +364,16 @@ window.addEvent('domready', function() {
 			<div class='lineare_no testo_cen' >
 
 
-		        <div class='lineare_20'><h3 class='gold'><i>Gold</i></h3></div>
 		        <div class='lineare_20 testo_cen'>
 		        	<a href='http://www.corley.it' target='_blank'><img src='sponsor_corley.png' class='sponsor' /></a>
-		        	<a href='http://cloud.libero.it/it/' target='_blank'><img height="80" src='sponsor_libero.png'
-                        class='sponsor' style="padding:25px; !important" /></a>
-		        </div>
-
-		        <div class='lineare_20'><h3 class='silver'><i>Silver</i></h3></div>
-		        <div class='lineare_20 testo_cen'>
-		        	<a href='http://www.criticalcase.com/' target='_blank'><img src='sponsor_critical.jpg' class='sponsor'  style='height:120px;'/></a>
-		        </div>
-
-		        <div class='lineare_20'><h3 class='silver'><i>Bronze</i></h3></div>
-		        <div class='lineare_20 testo_cen'>
-		        	<a href='http://www.neen.it/' target='_blank'><img src='sponsor_neen.png' class='sponsor' style='height:100px;' /></a>
-                    <a href='http://www.orientechnologies.com/' target='_blank'><img src='orient_technologies.png' class='sponsor' style='height:100px;' /></a>
+		        	<a href='http://www.getconnected.it' target='_blank'><img src='sponsor_getconnected.gif' class='sponsor' /></a>
+		        	<a href='http://www.ehiweb.it' target='_blank'><img src='sponsor_ehiweb.png' class='sponsor' /></a>
 		        </div>
 
 		        <div class='lineare_20'><h3><i>Con la collaborazione di </i></h3></div>
 		        <div class='lineare_20 testo_cen sponsormedia'>
-		        	<a href='http://torino.grusp.org/' target='_blank'><img src='sponsor_pug.png' class='sponsor' /></a>
-		        	<a href='http://milano.grusp.org/' target='_blank'><img src='pugmi.png' class='sponsor' /></a>
-					<!--<a href='http://www.grusp.it' target='_blank'><img src='sponsor_grusp.png' class='sponsor' /></a>-->
-					<!--<a href='http://www.ictbusiness.it' target='_blank'><img src='sponsor_ictbusiness.png' class='sponsor' /></a>-->
 		        	<a href='http://www.html.it' target='_blank'><img src='sponsor_html.png' class='sponsor' /></a>
-					<!--<a href='http://www.masterin.it' target='_blank'><img src='sponsor_master.png' class='sponsor' /></a>-->
-					<!--<a href='http://www.tomshw.it' target='_blank'><img src='sponsor_toms.png' class='sponsor' /></a>-->
-					<!--<a href='http://www.hostingtalk.it' target='_blank'><img src='sponsor_hostingtalk.png' class='sponsor' /></a>-->
-					<!--<a href='http://www.juliusdesign.net/' target='_blank'><img src='sponsor_julius.png' class='sponsor' /></a>-->
-					<!--<a href='http://www.codeinvaders.net' target='_blank'><img src='sponsor_code.png' class='sponsor' /></a>-->
+		        	<a href='http://www.t3lab.it' target='_blank'><img src='sponsor_t3lab.png' class='sponsor' /></a>
 		        </div>
 
 				<div class='lineare'>&nbsp;</div>
