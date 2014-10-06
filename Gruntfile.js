@@ -30,6 +30,7 @@ module.exports = function ( grunt ) {
       options: {
         accessKeyId: "<%= conf.aws.accessKeyId %>",
         secretAccessKey: "<%= conf.aws.secretAccessKey %>",
+        region: "<%= conf.aws.region %>",
         cache: false,
         access: "public-read",
         bucket: "<%= conf.aws.bucket %>"
