@@ -1,0 +1,28 @@
+{
+  "name": "cloudconf",
+  "version": "0.0.0",
+  "description": "CloudConf.it website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/corley/cloud-conf"
+  },
+  "keywords": [
+    "Cloud",
+    "conf"
+  ],
+  "author": "Corley",
+  "bugs": {
+    "url": "https://github.com/corley/cloud-conf/issues"
+  },
+  "homepage": "http://cloudconf.it",
+  "devDependencies": {
+    "grunt": "0.4.*",
+    "grunt-aws": "0.3.*",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-clean": "^0.6.0"
+  }
+}
