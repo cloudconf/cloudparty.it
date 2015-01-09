@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="CloudParty - Genova 24 Ottobre 2014" />
+<meta name="keyword" content="cloud, php, api, corley, cloudconf" />
+<meta name="Copyright" content="Corley" />
+<meta name="Language" content="English" />
+<meta name="robots" content ="index,follow" />
+<meta name="documentType" content="WebDocument" />
+<meta name="publisher" content="" />
+<meta name="ICBM" content="45.030, 7.40" />
+<meta name="geo.position" content="45.030, 7.40" />
+<title>CloudParty 2014 - Tag Genova 24 Ottobre</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<meta property="og:url" content="http://www.cloudparty.it"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://cloudparty.it/cloudparty_pink.jpg"/>
+
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css' />
+
+<script type="text/javascript" src="mootools-1.4.1-core.js"></script>
+<script type="text/javascript" src="mootools-1.4.0.1-more.js"></script>
+<script type="text/javascript" src="simple-modal.js"></script>
+
+<link href="styles.css?r=3" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type='text/javascript'>
+  function initialize_map() {
+      var mapOptions = {
+            zoom: 14,
+            center: new google.maps.LatLng(44.425318,8.86248),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+          }
+          var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+          var hotel = new google.maps.Marker({
+              position: new google.maps.LatLng(44.425318,8.86248),
+              map: map,
+              icon: 'marker.png',
+        title:"TAG GENOVA"
+          });
+
+        }
+    </script>
+
+<script type='text/javascript'>
+window.addEvent('domready', function() {
+
+  $$('.program2').fade(0.6);
+
+  initialize_map();
+
+  var modal = {
+    title: "Un grazie a tutti i partecipanti!",
+    contents: "Il primo CloudParty si è concluso! Trovi le slide nella sezione <i>programma</i>. Ti aspettiamo al prossimo CloudParty di gennaio!",
+    go: false
+  }
+  switch (window.location.search) {
+
+    case "?php" :
+      modal.title = "Pensi che PHP non possa scalare?";
+      modal.contents = "Alla Cloud Conference dimostreremo il contrario! Vieni a scoprire le strategie ed i servizi per far scalare il tuo applicativo PHP e MySQL. Rimarrai sopreso!";
+      modal.go = true;
+    break;
+  }
+
+  if(modal.go) {
+    SM = new SimpleModal({width:600, btn_ok: "Ok! (chiudi la finestra)"});
+      SM.show(modal);
+  }
+
+  var links = $$('.link');
+  links.each(function(link, ii) {
+    link.addEvent('click', function(evento) {
+      evento.preventDefault();
+      var iii = ii+1;
+      new Fx.Scroll(window).toElement('block'+iii);
+    });
+  });
+
+  $('gotop').addEvent('click', function() {
+    new Fx.Scroll(window).toTop();
+  });
+
+
+
+  var update_pos = function(fxc, el){
+    var scroll = window.getScroll();
+    fxc.start({
+      'top': [el.getStyle('top'), scroll.y+250]
+    });
+  }
+
+
+});
+</script>
+
+    <style type="text/css">
+        #liv0 {
+            background-image:url(php-genova-bg.jpg);
+        }
+        #fixed {
+            background :transparent url(genova_fixed_bg.png);
+        }
+        .programs .program p.speaker a {
+            color:#2721D0;
+        }
+        #map_canvas_over{
+            background-color:#2721D0;
+        }
+        img.sponsor {
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<div class='lineare_no' id='liv0'>
+    <div id='fixed' class='lineare_no'>
+      <a href='#conferenza' class='link' >Evento</a>
+      <a href='#programma' class='link'>Programma</a>
+      <a href='#biglietti' class='link'>Biglietto Gratuito</a>
+      <a href='#location' class='link'>Location</a>
+      <a href='#sponsor' class='link'>Sponsor</a>
+      <a href='https://twitter.com/_CloudConf_' target='_blank'><img src='twitter.png' border='0' /></a>
+      <a href='https://www.facebook.com/pages/Cloud-Conf-Italia/140265592804313' target='_blank'><img src='facebook.png' border='0' /></a>
+  </div>
+
+
+  <div class='inside' id='liv1'>
+    <div class='lineare_no' id='header'>
+      <h2>Venerdì 24 Ottobre 2014, a Genova</h2>
+      <h1>CloudParty: PHP & Cloud</h1>
+      <h3>Sviluppo di applicazioni PHP sulla nuvola</h3>
+    </div>
+
+
+    <div id='block1' class='block' >
+      <a name='conferenza' class='ancor'></a>
+      <div class='lineare_no' style='background:transparent url(/clouds.png) top right no-repeat;'>
+        <div class='title'>
+          <h3 class='testo_sin'><span class='grassetto'>La conferenza</span> - <span>Un pomeriggio all'insegna della scalabilità</span></h3>
+        </div>
+          <div class='lineare_no'>
+            <div class='trequarti'>
+                <p>La seconda edizione della <a href='http://www.cloudconf.it' target='_blank'>CloudConference</a> di Torino si è rivelata nuovamente un successo. Con lo stesso entusiasmo continuano i CloudParty: eventi a tappe, della durata di un pomeriggio, con l'obiettivo di scoprire insieme le ultime novità sul Cloud, mettere in contatto startup e professionisti, e socializzare attraverso spazi di networking dedicati. </br>
+                    (precedenti CloudParty: <a href="/milano2013.html">Database &amp; Cloud</a>, <a href="/milano2013.html">JS &amp; Cloud</a>, <a href="/milano2014.html">Deploy in Cloud</a>)</p>
+                </div>
+          </div>
+
+          <div class="lineare_25">
+                         <div class='quarto' >
+              <h3 class='testo_sin testo20'>Ambiente dinamico</h3>
+              <p>Un evento dedicato a tutti gli sviluppatori, startup e professionisti IT, composto da diversi talk sulle tecnologie di deploy, ospitato nei fiorenti spazi del Coworking Talent Garden di Genova.
+                </p>
+            </div>
+
+                        <div class='quarto' style='margin-left:4%;'>
+              <h3 class='testo_sin testo20'>Biglietto gratuito</h3>
+              <p>Il CloudParty è un evento gratuito, perchè vuole essere un punto di incontro e condivisione, una possibilità per ogni partecipante di allargare la propria visione e approcciarsi a nuove tecnologie.</p>
+            </div>
+
+                         <div class='quarto' style='margin-left:4%;'>
+              <h3 class='testo_sin testo20'>Rinfresco &amp; Networking</h3>
+              <p>Il CloudParty è anche una festa, un momento per rilassarsi e fare nuove conoscenze. Per questo verrà offerto un rinfresco a tutti partecipanti durante il quale conoscersi e approfondire.  </p>
+            </div>
+          </div>
+      </div>
+
+
+      <div class='lineare'>
+        <div class="addthis_wrapper lineare_no">
+                        <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style lineare_no">
+  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+  <a class="addthis_button_tweet" style='margin-left:20px;'></a>
+  <a class="addthis_button_pinterest_pinit"></a>
+  </div>
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511288d075bcec8a"></script>
+  <!-- AddThis Button END -->
+                          <!-- AddThis Button END -->
+        </div>
+      </div>
+      <div class='lineare_no'>
+        <p>Prenota gratuitamente il tuo <a href='#biglietti'>biglietto</a>, non perdere tempo!</p>
+      </div>
+    </div>
+
+    <div id='block2' class='block'>
+      <a name='programma' class='ancor'></a>
+      <div class='title'>
+        <h3><span class='grassetto'>Programma &amp; Biglietti</span></h3>
+      </div>
+      <div class='programs lineare_25'>
+
+        <div class='program program2'>
+          <div class='quinto'>14.00 - 14.30</div>
+          <div class='trequarti'>
+            <h3>Registrazione e accettazione</h3>
+          </div>
+        </div>
+
+        <div class='program program2'>
+          <div class='quinto'>14.30 - 14.45</div>
+          <div class='trequarti'>
+            <h3>Presentazione Cloud Party</h3>
+          </div>
+        </div>
+
+        <div class='program'>
+          <div class='quinto'>14.45 - 15:15</div>
+              <div class='trequarti corley'>
+                <h3>PHP e MySQL incontrano il Cloud: scalabilità senza limiti </h3>
+                 <p class='speaker'>di <a href='http://www.linkedin.com/in/gabrielemittica' target='_blank'>Gabriele Mittica</a> (<a
+                            href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/gabrielemittica' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
+                <p>
+                    Problemi, soluzioni e tecnologie adottate per fa scalare un classico applicativo PHP. Scopriamo le potenzialità offerte dal Cloud, i problemi di performance e gestione di un applicativo caratterizzato da traffico intenso e le soluzioni e strategie da adottare: dalla gestione delle sessioni all' alta disponibilità, dalla scalabilità dei database alla distribuzione dei file statici.
+                </p>
+              </div>
+        </div>
+
+        <div class='program'>
+          <div class='quinto'>15:15 - 15:45</div>
+              <div class='trequarti corley'>
+                <h3>Scaliamo la nostra applicazione PHP sul Cloud con Elastic Beanstalk</h3>
+                 <p class='speaker'>di <a href='http://www.linkedin.com/in/walterdalmut' target='_blank'>Walter Dal Mut</a> (<a
+                            href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/walterdalmut' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)</p>
+                <p>
+                    In questo talk vedremo come far scalare la nostra applicazione su AWS grazie al deploy in un'ambiente elastico e distribuito sfruttando il supporto di Elastic Beanstalk.
+                </p>
+              </div>
+        </div>
+
+        <div class='program  program2'>
+          <div class='quinto'>15:45 - 16:15</div>
+          <div class='trequarti'>
+            <h3>Break!</h3>
+          </div>
+        </div>
+
+        <div class='program'>
+          <div class='quinto'>16:15 - 16:45</div>
+          <div class='trequarti corley'>
+            <h3>Sviluppo di API REST con ZF2 & MongoDB</h3>
+             <p class='speaker'>di
+                <a href='https://github.com/gianarb' target='_blank'>Gianluca Arbezzano</a>, (<a href='http://www.corley.it' target='_blank'>Corley srl</a>, <a href='https://twitter.com/GianArb' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <p>
+                L'utilizzo di sistemi di API per l'erogazione di contenuti fruibili da diverse applicazioni è in continuo aumento, ed è difficile sapere a priori quanto veranno utilizzare. Il Cloud è la scalabilità ben si sposano con questa filosofia permettendoti di adattarti velocemente a forti variazioni di carico. In questo talk vedremo come sviluppare API in PHP con Zend Framework 2 , MongoDB e Doctrine ODM.
+             </p>
+          </div>
+        </div>
+
+        <div class='program'>
+          <div class='quinto'>16:45 - 17:15</div>
+          <div class='trequarti corley'>
+            <h3>Progettare architetture RESTful in PHP con Apigility</h3>
+             <p class='speaker'>di
+                <a href='http://www.zimuel.it/' target='_blank'>Enrico Zimuel</a>, (<a href='http://www.zend.com' target='_blank'>Zend Technologies</a>, <a href='https://twitter.com/ezimuel' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <p>
+                In questo talk verranno presentati i problemi e le possibili
+                soluzioni per lo sviluppo di API RESTful in PHP. In particolare
+                cerchermo di rispondere alle seguenti domande: quali sono in vantaggi
+                di un servizio RESTful? Che cos'è HATEOAS? Come gestire il versioning
+                delle API? Quale formato utilizzare per la rappresentazione dei dati?
+                Come gestire i messaggi d'errore? Come gestire l'autenticazione?
+                Infine, vedremo come utilizzare il progetto open source <a target="_blank" href="http://apigility.org">Apigility</a>
+                per implementare un servizio RESTful in pochi
+                minuti.
+             </p>
+          </div>
+
+        </div>
+
+        <div class='program'>
+          <div class='quinto'>17:15 - 17:45</div>
+          <div class='trequarti corley'>
+            <h3>Setup di un cluster SolrCloud e integrazione con PHP</h3>
+             <p class='speaker'>di
+                <a href='https://www.linkedin.com/in/gennarovietri' target='_blank'>Gennaro Vietri</a>, (<a href='http://www.bitbull.it/' target='_blank'>BitBull srl</a>, <a href='https://twitter.com/kesonno' target='_blank' class='twitter'><img src='social_twitter.png' border='0' alt=''/></a>)
+             </p>
+             <p>
+                Apache Solr è una piattaforma opensource di ricerca basata su Lucene
+                con caratteristiche di classe enterprise, tra le quali ricerca
+                fulltext e gestione automatica delle facet. SolrCloud è un insieme di
+                nuove caratteristiche e funzionalità aggiunte in Solr 4 e basate su
+                ZooKeper, tese a semplificare il setup e la gestione di cluster Solr
+                robusti e in alta disponibilità.
+                In questa presentazione vedremo un semplice setup di SolrCloud e quali
+                sono i vantaggi di un'integrazione tra PHP e Solr e quali sono le
+                opzioni oggi disponibili per realizzare questa integrazione.
+             </p>
+          </div>
+        </div>
+
+        <div class='program  program2'>
+          <div class='quinto'>17:45</div>
+          <div class='trequarti'>
+            <h3>Aperitivo!</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+    <div id='block3' class='block'>
+      <a name='biglietti' class='ancor'></a>
+      <div class='lineare_no testo_cen' >
+        <h3>Prenota ora il tuo biglietto per il CloudParty al TAG Genova</h3>
+        <div class='lineare' >
+         <div style="width:100%; text-align:left;" ><iframe  src="//eventbrite.it/tickets-external?eid=13087359645&ref=etckt" frameborder="0" height="250" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it/r/etckt">Registrazione dell'evento online</a><span style="color:#ddd;"> per </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://2014-genova-cloudparty.eventbrite.it/?ref=etckt">PHP & CloudComputing @ CloudParty Genova 2014</a> <span style="color:#ddd;">con tecnologia</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.it?ref=etckt">Eventbrite</a></div></div>
+        </div>
+        <div class='lineare testo_cen'>CloudParty e CloudConference sono eventi divulgativi. Non si vende alcun servizio o prodotto. Il nostro obiettivo è contribuire alla crescita della comunità tecnologica italiana.</div>
+      </div>
+    </div>
+
+
+    <div id='block4' class='block'>
+      <a name='location' class='ancor'></a>
+      <div class='title'>
+        <h3><span class='grassetto'>La Location</span></h3>
+      </div>
+         <p class="testo_cen">L'evento si svolgerà presso il Talent Garden di Genova, il coworking tecnologico situato presso </p>
+         <p class="testo_cen"><strong><a href='http://genova.talentgarden.it/' target='_blank'>Talent Garden</a></strong><br/>Via Melen, 77, Edificio A - Primo piano,  Genova</p>
+      <div class='lineare_20' id='map_canvas_over'>
+        <div class='lineare_no' id='map_canvas'></div>
+      </div>
+      <div class='lineare_20'>
+        <div class='quarto'>
+          <p><strong>In Auto o bici</strong></p>
+          <p>Seguire le indicazioni per GENOVA AEROPORTO. Una volta arrivati in prossimità della stazione di Cornigliano svoltare a destra seguendo le indicazioni per l’autostrada in via Melen. Poco prima del casello seguire le indicazioni per ERZELLI.</p>
+        </div>
+        <div class='quarto' style='margin-left:8%;'>
+          <p><strong>In bus</strong></p>
+           <p>
+                LINEE URBANE 128 e 128/ da pizza Di Vittorio. Il bus attraversa via Antonio Sant’Elia e raggiunge il capolinea sotto il palazzo del TAG in circa 10min. La linea è attiva tutti i giorni.
+                LINEA URBANA 5 parte dalla Stazione di Cornigliano e raggiunge il capolinea sotto il palazzo del TAG in circa 10min. Attenzione la linea è attiva solo negli orari di punta.
+           </p>
+        </div>
+        <div class='quarto' style='margin-left:8%;'>
+          <p><strong>In Treno</strong></p>
+           <p>
+                Scendere alla stazione di SESTRI PONENTE o GENOVA CORNIGLIANO e seguire le indicazioni per chi arriva in bus.
+           </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div  class='block'>
+      <h3><span class='grassetto'></span></h3>
+      <div class='lineare testo_cen'><a href='https://twitter.com/_CloudConf_' target='_blank'><img src='follow.png' alt='' /></a></div>
+      <div class='lineare testo_cen testo13 italico'>non dimenticare di seguirci su Twitter!</div>
+    </div>
+
+
+
+    <div id='block5' class='block'>
+      <a name='sponsor' class='ancor'></a>
+      <div class='title'>
+        <h3><span class='grassetto'>Sponsor</span></h3>
+      </div>
+      <div class='lineare_no testo_cen' >
+
+
+            <div class='lineare_20 testo_cen'>
+              <a href='http://www.corley.it' target='_blank'><img src='sponsor_corley.png' class='sponsor' /></a>
+              <a href='http://www.zend.com' target='_blank'><img src='sponsor_zend.png' class='sponsor' /></a>
+            </div>
+
+            <div class='lineare_20'><h3><i>Con la collaborazione di </i></h3></div>
+            <div class='lineare_20 testo_cen sponsormedia'>
+              <a href='http://torino.grusp.org/' target='_blank'><img src='sponsor_pug.png' class='sponsor' /></a>
+              <a href='http://genova.talentgarden.org/' target='_blank'><img src='sponsor_taggenova.png' class='sponsor' /></a>
+              <a href='http://milano.grusp.org/' target='_blank'><img src='sponsor_pugmi.png' class='sponsor' /></a>
+              <a href='http://grusp.it/' target='_blank'><img src='sponsor_grusp.png' class='sponsor' /></a>
+          </div>
+
+        <div class='lineare'>&nbsp;</div>
+        <div class='lineare'>
+          <h3><span class='grassetto'>Sponsorizza</span></h3>
+        </div>
+
+            <div class='lineare'>
+                <p>CloudParty è una iniziativa possibile anche grazie all'impegno e supporto degli sponsor.</p>
+                <p>L'evento si propone come conferenza di riferimento per il Cloud Computing in Italia, e rappresenta una <strong>grande occasione</strong> per aumentare la visibilità della propria azienda.</p>
+                <p>Per informazioni a riguardo, <a href='mailto:cloudconf@corley.it'>contattateci</a>.</p>
+              </div>
+            </div>
+
+      </div>
+    </div>
+
+
+
+</div>
+
+  <div class='staytuned lineare_no'>ti aspettiamo!</div>
+  <div class='footer'>&copy; CloudParty - Venerdì 24 Ottobre 2014, Genova - <span id='gotop' class='puntatore'>torna in cima</span></div>
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32091906-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+</body>
+</html>
